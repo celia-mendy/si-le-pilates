@@ -1,10 +1,20 @@
 "use client"
 
-import { useEffect, useRef } from "react"
-import Cal, { getCalApi } from "@calcom/embed-react"
+import { useEffect, useRef, useState } from "react"
+import dynamic from "next/dynamic"
+
+const Cal = dynamic(() => import("@calcom/embed-react").then((mod) => mod.default), {
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center min-h-[600px]">
+      <div className="animate-pulse text-soft-taupe">Chargement du calendrier...</div>
+    </div>
+  ),
+})
 
 export function Booking() {
   const sectionRef = useRef<HTMLElement>(null)
+  const [calLoaded, setCalLoaded] = useState(false)
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -28,15 +38,23 @@ export function Booking() {
   }, [])
 
   useEffect(() => {
-    (async function () {
+    setCalLoaded(true)
+  }, [])
+
+  useEffect(() => {
+    if (!calLoaded) return
+    
+    const initCal = async () => {
+      const { getCalApi } = await import("@calcom/embed-react")
       const cal = await getCalApi({ namespace: "reserver-une-seance-de-pilates-reformer" })
       cal("ui", {
         styles: { branding: { brandColor: "#3E2D22" } },
         hideEventTypeDetails: true,
         layout: "month_view",
       })
-    })()
-  }, [])
+    }
+    initCal()
+  }, [calLoaded])
 
   return (
     <section
@@ -63,14 +81,16 @@ export function Booking() {
         <div className="reveal opacity-0 translate-y-8 transition-all duration-1000 delay-300">
           <div className="bg-white rounded-[2rem] p-4 sm:p-6 lg:p-8 shadow-2xl shadow-cocoa/10 overflow-hidden">
             <div className="cal-embed-container rounded-2xl overflow-hidden">
-              <Cal
-                namespace="reserver-une-seance-de-pilates-reformer"
-                calLink="tewfiqferahi/reserver-une-seance-de-pilates-reformer"
-                style={{ width: "100%", height: "100%", overflow: "scroll" }}
-                config={{
-                  layout: "month_view",
-                }}
-              />
+              {calLoaded && (
+                <Cal
+                  namespace="reserver-une-seance-de-pilates-reformer"
+                  calLink="tewfiqferahi/reserver-une-seance-de-pilates-reformer"
+                  style={{ width: "100%", height: "100%", overflow: "scroll" }}
+                  config={{
+                    layout: "month_view",
+                  }}
+                />
+              )}
             </div>
           </div>
         </div>
