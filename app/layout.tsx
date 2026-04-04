@@ -28,8 +28,11 @@ export const metadata: Metadata = {
   keywords: ['Pilates', 'Pilates Reformer', 'Cergy-Pontoise', 'Studio Pilates', 'Cours de Pilates', 'Si Le Pilates'],
   authors: [{ name: 'Si Le Pilates' }],
   metadataBase: new URL(siteUrl),
-  alternates: {
-    canonical: siteUrl,
+  alternates: { canonical: siteUrl },
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
   },
   openGraph: {
     title,
