@@ -91,7 +91,7 @@ const fr = {
       label: "Accès",
       text: "Confirmation envoyée par email\naprès réservation avec toutes les informations utiles.",
     },
-    contact: { label: "Contact", email: "contact@silpilate.fr" },
+    contact: { label: "Contact", email: "team@si-lepilates.com" },
   },
   faq: {
     overline: "FAQ",
@@ -127,7 +127,7 @@ const fr = {
     instagram: "@silpilate",
     navTitle: "Navigation",
     contactTitle: "Contact",
-    email: "contact@silpilate.fr",
+    email: "team@si-lepilates.com",
     address: "34, rue Pierre Butin, 95300 Pontoise",
     navItems: [
       { name: "Le studio", href: "#studio" },
@@ -232,7 +232,7 @@ const en: typeof fr = {
       label: "Access",
       text: "A confirmation email is sent immediately after booking with all the details you need.",
     },
-    contact: { label: "Contact", email: "contact@silpilate.fr" },
+    contact: { label: "Contact", email: "team@si-lepilates.com" },
   },
   faq: {
     overline: "FAQ",
@@ -268,7 +268,7 @@ const en: typeof fr = {
     instagram: "@silpilate",
     navTitle: "Navigation",
     contactTitle: "Contact",
-    email: "contact@silpilate.fr",
+    email: "team@si-lepilates.com",
     address: "34, rue Pierre Butin, 95300 Pontoise",
     navItems: [
       { name: "The studio", href: "#studio" },
