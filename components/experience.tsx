@@ -7,12 +7,12 @@ const formats = [
   {
     title: "Séances privées",
     text: "Un format dédié à celles et ceux qui souhaitent un accompagnement entièrement personnalisé.",
-    image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=2069&auto=format&fit=crop",
+    image: "/images/190701_GOOD-DAY_242+copy.jpg",
   },
   {
     title: "Cours collectifs",
     text: "Une dynamique douce et motivante, dans un groupe à taille humaine pour pratiquer avec confort.",
-    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/190701_GOOD-DAY_140.jpg",
   },
 ]
 

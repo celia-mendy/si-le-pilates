@@ -43,7 +43,7 @@ export function Hero() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=2070&auto=format&fit=crop')`,
+            backgroundImage: `url('/images/NRO_201009_GD_0705.jpg')`,
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-cream/60 via-cream/40 to-cream/80" />

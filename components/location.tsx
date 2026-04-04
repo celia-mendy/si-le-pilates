@@ -62,7 +62,7 @@ export function Location() {
                 <div>
                   <h3 className="font-medium text-deep-brown mb-1">Adresse</h3>
                   <p className="text-soft-taupe">
-                    Adresse complète visible lors de la réservation
+                    Gare de Cergy
                     <br />
                     95000 Cergy-Pontoise
                   </p>
@@ -94,29 +94,20 @@ export function Location() {
             </div>
           </div>
 
-          {/* Map Placeholder */}
+          {/* Map */}
           <div className="reveal opacity-0 translate-y-8 transition-all duration-1000 delay-300">
-            <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl shadow-cocoa/10 bg-warm-beige">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-white/80 flex items-center justify-center">
-                    <MapPin className="w-8 h-8 text-cocoa" />
-                  </div>
-                  <p className="font-serif text-2xl text-deep-brown mb-2">Silpilate</p>
-                  <p className="text-soft-taupe">Cergy-Pontoise</p>
-                </div>
-              </div>
-              {/* Decorative pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                  <defs>
-                    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-cocoa"/>
-                    </pattern>
-                  </defs>
-                  <rect width="100" height="100" fill="url(#grid)" />
-                </svg>
-              </div>
+            <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl shadow-cocoa/10">
+              <iframe
+                src="https://maps.google.com/maps?q=Gare+de+Cergy&output=embed&hl=fr&z=15"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localisation Silpilate — Gare de Cergy"
+                className="absolute inset-0 w-full h-full"
+              />
             </div>
           </div>
         </div>
