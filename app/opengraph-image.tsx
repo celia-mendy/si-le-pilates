@@ -2,6 +2,7 @@ import { ImageResponse } from 'next/og'
 import { readFile } from 'fs/promises'
 import path from 'path'
 
+export const runtime = 'nodejs'
 export const alt = 'Si Le Pilates — Studio de Pilates Reformer à Cergy-Pontoise'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
