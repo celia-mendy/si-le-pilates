@@ -1,16 +1,11 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-
-const stats = [
-  { label: "Petit groupe" },
-  { label: "45 min" },
-  { label: "Cergy-Pontoise" },
-  { label: "Réservation en ligne" },
-]
+import { useLanguage } from "@/contexts/language-context"
 
 export function Intro() {
   const sectionRef = useRef<HTMLElement>(null)
+  const { t } = useLanguage()
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -19,51 +14,43 @@ export function Intro() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-in")
-          }
+          if (entry.isIntersecting) entry.target.classList.add("animate-in")
         })
       },
       { threshold: 0.2 }
     )
 
-    const elements = sectionRef.current?.querySelectorAll(".reveal")
-    elements?.forEach((el) => observer.observe(el))
-
+    sectionRef.current?.querySelectorAll(".reveal").forEach((el) => observer.observe(el))
     return () => observer.disconnect()
   }, [])
 
   return (
-    <section
-      ref={sectionRef}
-      className="py-24 sm:py-32 lg:py-40 bg-white dark:bg-card"
-    >
+    <section ref={sectionRef} className="py-24 sm:py-32 lg:py-40 bg-background">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-        {/* Label */}
         <p className="reveal opacity-0 translate-y-6 transition-all duration-700 mb-6 text-xs sm:text-sm uppercase tracking-[0.2em] text-muted-gold font-medium">
-          {"L'esprit Silpilate"}
+          {t.intro.overline}
         </p>
 
-        {/* Title */}
         <h2 className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-100 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-deep-brown dark:text-foreground mb-8 text-balance">
-          Un studio pensé comme une parenthèse.
+          {t.intro.title}
         </h2>
 
-        {/* Text */}
         <p className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-200 text-lg sm:text-xl text-soft-taupe leading-relaxed max-w-3xl mx-auto mb-16">
-          Ici, tout a été imaginé pour retrouver un corps plus aligné, une respiration plus fluide
-          et une sensation d&apos;équilibre durable. Le lieu est calme. La pratique est précise. La
-          réservation reste simple.
+          {t.intro.body}
         </p>
 
-        {/* Stats */}
         <div className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-300 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
-          {stats.map((stat, index) => (
+          {t.intro.chips.map((chip, index) => (
             <div
               key={index}
-              className="px-5 py-2.5 bg-warm-beige/50 rounded-full text-sm text-cocoa dark:text-foreground font-medium"
+              className="px-5 py-2.5 rounded-full text-sm font-medium"
+              style={{
+                background: "var(--th-chip)",
+                color: "var(--th-chip-text)",
+                border: "1px solid color-mix(in srgb, var(--th-border) 85%, transparent)",
+              }}
             >
-              {stat.label}
+              {chip}
             </div>
           ))}
         </div>

@@ -2,9 +2,11 @@
 
 import { useEffect, useRef } from "react"
 import Script from "next/script"
+import { useLanguage } from "@/contexts/language-context"
 
 export function Booking() {
   const sectionRef = useRef<HTMLElement>(null)
+  const { t } = useLanguage()
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -13,26 +15,18 @@ export function Booking() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-in")
-          }
+          if (entry.isIntersecting) entry.target.classList.add("animate-in")
         })
       },
       { threshold: 0.1 }
     )
 
-    const elements = sectionRef.current?.querySelectorAll(".reveal")
-    elements?.forEach((el) => observer.observe(el))
-
+    sectionRef.current?.querySelectorAll(".reveal").forEach((el) => observer.observe(el))
     return () => observer.disconnect()
   }, [])
 
   return (
-    <section
-      ref={sectionRef}
-      id="booking"
-      className="py-24 sm:py-32 lg:py-40 bg-warm-beige/40"
-    >
+    <section ref={sectionRef} id="booking" className="py-24 sm:py-32 lg:py-40 bg-warm-beige/40">
       <Script
         id="insert-bsport-widget-cdn"
         strategy="afterInteractive"
@@ -64,32 +58,27 @@ export function Booking() {
               "showFab": false,
               "fullScreenPopup": false,
               "styles": undefined,
-              "config": {
-                "calendar": {}
-              }
+              "config": { "calendar": {} }
             })
           `,
         }}
       />
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-12 lg:mb-16">
           <p className="reveal opacity-0 translate-y-6 transition-all duration-700 mb-6 text-xs sm:text-sm uppercase tracking-[0.2em] text-muted-gold font-medium">
-            Réservation
+            {t.booking.overline}
           </p>
           <h2 className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-100 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-deep-brown dark:text-foreground mb-6 text-balance">
-            Réserver votre séance
+            {t.booking.title}
           </h2>
           <p className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-200 text-lg sm:text-xl text-soft-taupe max-w-2xl mx-auto">
-            Choisissez votre créneau directement en ligne. Une réservation simple, pensée pour
-            revenir facilement chaque fois que vous en avez envie.
+            {t.booking.subtitle}
           </p>
         </div>
 
-        {/* Bsport Widget Container */}
         <div className="reveal opacity-0 translate-y-8 transition-all duration-1000 delay-300">
-          <div className="bg-white dark:bg-card rounded-[2rem] p-4 sm:p-6 lg:p-8 shadow-2xl shadow-cocoa/10 overflow-hidden">
+          <div className="bg-card rounded-[2rem] p-4 sm:p-6 lg:p-8 shadow-2xl shadow-cocoa/10 overflow-hidden">
             <div id="bsport-widget-758785" className="rounded-2xl overflow-hidden min-h-[600px]" />
           </div>
         </div>

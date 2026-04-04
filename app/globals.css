@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Silpilate Brand Colors - V2 Palette */
+  /* Silpilate Brand Colors — V1 (defaults) */
   --cream: #F9F6F1;
   --warm-beige: #E8DCC3;
   --sand: #F3EDE3;
@@ -14,11 +14,11 @@
   --cocoa: #3A2E2A;
   --deep-brown: #2B2B2B;
   --soft-taupe: #BFA6A0;
-  
-  /* Design System Tokens */
+
+  /* Design System Tokens — V1 light */
   --background: #F9F6F1;
   --foreground: #2B2B2B;
-  --card: #F3EDE3;
+  --card: #ffffff;
   --card-foreground: #2B2B2B;
   --popover: #F3EDE3;
   --popover-foreground: #2B2B2B;
@@ -36,6 +36,28 @@
   --input: #BFA6A0;
   --ring: #C9A96E;
   --radius: 1rem;
+
+  /* Semantic theme tokens — V1 light defaults */
+  --th-bg: #F9F6F1;
+  --th-bg-secondary: #F3EDE3;
+  --th-surface: #ffffff;
+  --th-surface-soft: #F7F7F7;
+  --th-text: #2B2B2B;
+  --th-text-muted: #BFA6A0;
+  --th-accent: #C9A96E;
+  --th-accent-hover: #B8956A;
+  --th-accent-fg: #ffffff;
+  --th-border: #BFA6A0;
+  --th-chip: rgba(0,0,0,0.04);
+  --th-chip-text: #3A2E2A;
+  --th-shadow-soft: 0 8px 24px rgba(0,0,0,0.06);
+  --th-shadow-card: 0 12px 30px rgba(0,0,0,0.06);
+  --th-focus-ring: rgba(201, 169, 110, 0.35);
+
+  /* CTA themed tokens — V1 light */
+  --cta-bg: #2B2B2B;
+  --cta-hover: #3A2E2A;
+  --cta-fg: #ffffff;
 }
 
 @theme inline {
@@ -65,7 +87,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  
+
   /* Brand Colors */
   --color-cream: var(--cream);
   --color-warm-beige: var(--warm-beige);
@@ -78,8 +100,8 @@
   --color-soft-taupe: var(--soft-taupe);
 }
 
+/* ─── V1 Dark ─────────────────────────────────────────────── */
 .dark {
-  /* Design system tokens */
   --background: #1D1814;
   --foreground: #F0EBE3;
   --card: #252017;
@@ -92,31 +114,139 @@
   --input: #3D3028;
   --ring: #C9A96E;
 
-  /* Brand background colors */
   --cream: #1D1814;
   --warm-beige: #262018;
   --sand: #252017;
   --powder-rose: #3D2E2E;
   --soft-taupe: #A09088;
+
+  --cta-bg: #F0EBE3;
+  --cta-hover: #ffffff;
+  --cta-fg: #1D1814;
+}
+
+/* ─── V2 Light ────────────────────────────────────────────── */
+[data-theme-family="v2"][data-theme-mode="light"] {
+  /* Brand color overrides */
+  --cream: #E5D9C8;
+  --warm-beige: #F2ECE4;
+  --sand: #F7F2EB;
+  --powder-rose: #EEDFD5;
+  --blush: #C98580;
+  --muted-gold: #C98580;
+  --soft-taupe: #6E5F59;
+  --cocoa: #3A2F2A;
+
+  /* Design system tokens */
+  --background: #E5D9C8;
+  --foreground: #3A2F2A;
+  --card: #F7F2EB;
+  --card-foreground: #3A2F2A;
+  --muted: #EFE4D8;
+  --muted-foreground: #6E5F59;
+  --border: #D8C8B8;
+  --input: #D8C8B8;
+  --ring: #C98580;
+
+  /* Semantic tokens */
+  --th-bg: #E5D9C8;
+  --th-bg-secondary: #F2ECE4;
+  --th-surface: #F7F2EB;
+  --th-surface-soft: #EFE4D8;
+  --th-text: #3A2F2A;
+  --th-text-muted: #6E5F59;
+  --th-accent: #C98580;
+  --th-accent-hover: #B8746F;
+  --th-accent-fg: #FFF8F3;
+  --th-border: #D8C8B8;
+  --th-chip: #EEDFD5;
+  --th-chip-text: #5E4843;
+  --th-shadow-soft: 0 8px 30px rgba(58, 47, 42, 0.08);
+  --th-shadow-card: 0 12px 40px rgba(58, 47, 42, 0.08);
+  --th-focus-ring: rgba(201, 133, 128, 0.35);
+
+  /* CTA tokens */
+  --cta-bg: #C98580;
+  --cta-hover: #B8746F;
+  --cta-fg: #FFF8F3;
+}
+
+/* ─── V2 Dark ─────────────────────────────────────────────── */
+[data-theme-family="v2"][data-theme-mode="dark"] {
+  /* Brand color overrides */
+  --cream: #241C19;
+  --warm-beige: #2B221F;
+  --sand: #382E29;
+  --powder-rose: #4A3B36;
+  --blush: #D69A95;
+  --muted-gold: #D69A95;
+  --soft-taupe: #D6C9BC;
+  --cocoa: #F3EDE5;
+  /* --deep-brown stays #2B2B2B → footer reste sombre */
+
+  /* Design system tokens */
+  --background: #241C19;
+  --foreground: #F3EDE5;
+  --card: #382E29;
+  --card-foreground: #F3EDE5;
+  --muted: #423631;
+  --muted-foreground: #D6C9BC;
+  --border: #4A3E38;
+  --input: #4A3E38;
+  --ring: #D69A95;
+
+  /* Semantic tokens */
+  --th-bg: #241C19;
+  --th-bg-secondary: #2B221F;
+  --th-surface: #382E29;
+  --th-surface-soft: #423631;
+  --th-text: #F3EDE5;
+  --th-text-muted: #D6C9BC;
+  --th-accent: #D69A95;
+  --th-accent-hover: #E3AAA5;
+  --th-accent-fg: #241C19;
+  --th-border: #4A3E38;
+  --th-chip: #4A3B36;
+  --th-chip-text: #F0DDD7;
+  --th-shadow-soft: 0 10px 36px rgba(0, 0, 0, 0.22);
+  --th-shadow-card: 0 14px 44px rgba(0, 0, 0, 0.24);
+  --th-focus-ring: rgba(214, 154, 149, 0.28);
+
+  /* CTA tokens */
+  --cta-bg: #D69A95;
+  --cta-hover: #E3AAA5;
+  --cta-fg: #241C19;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+    transition: background-color 300ms ease, color 300ms ease;
   }
-  
+
+  ::selection {
+    background: var(--th-accent);
+    color: var(--th-accent-fg);
+  }
+
+  :focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px var(--th-focus-ring);
+  }
+
   html {
     scroll-behavior: smooth;
   }
-  
+
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
     }
-    
+
     *,
     *::before,
     *::after {
@@ -127,7 +257,17 @@
   }
 }
 
-/* Cal.com Embed Styles */
+/* ─── Boutons CTA thémés ──────────────────────────────────── */
+.btn-primary {
+  background: var(--cta-bg);
+  color: var(--cta-fg);
+  transition: background-color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
+}
+.btn-primary:hover {
+  background: var(--cta-hover);
+}
+
+/* ─── Bsport Embed ────────────────────────────────────────── */
 .cal-embed-container {
   min-height: 700px;
 }
