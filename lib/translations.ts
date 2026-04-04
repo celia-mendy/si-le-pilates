@@ -155,7 +155,7 @@ const en: typeof fr = {
   hero: {
     eyebrow: "Pilates Reformer Studio",
     title1: "The calm of the space.",
-    title2: "The simplicity of booking.",
+    title2: "The simplicity\nof booking.",
     subtitle:
       "Si Le Pilates is a Pilates Reformer studio in Cergy-Pontoise, designed to offer an elegant, soothing and effortless experience.",
     ctaPrimary: "Book a session",
