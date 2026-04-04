@@ -4,37 +4,37 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Silpilate Brand Colors */
-  --cream: #F7F1E8;
-  --warm-beige: #E8DCC8;
-  --sand: #D9C6AA;
-  --blush: #D8A7A7;
-  --powder-rose: #E4C6C7;
-  --muted-gold: #D4BF8D;
-  --cocoa: #5A4334;
-  --deep-brown: #3E2D22;
-  --soft-taupe: #7C6A5F;
+  /* Silpilate Brand Colors - V2 Palette */
+  --cream: #F9F6F1;
+  --warm-beige: #E8DCC3;
+  --sand: #F3EDE3;
+  --blush: #D97C7C;
+  --powder-rose: #BFA6A0;
+  --muted-gold: #C9A96E;
+  --cocoa: #3A2E2A;
+  --deep-brown: #2B2B2B;
+  --soft-taupe: #BFA6A0;
   
   /* Design System Tokens */
-  --background: #F7F1E8;
-  --foreground: #3E2D22;
-  --card: #FFFFFF;
-  --card-foreground: #3E2D22;
-  --popover: #FFFFFF;
-  --popover-foreground: #3E2D22;
-  --primary: #3E2D22;
-  --primary-foreground: #FFFFFF;
-  --secondary: rgba(255, 255, 255, 0.55);
-  --secondary-foreground: #3E2D22;
-  --muted: #E8DCC8;
-  --muted-foreground: #7C6A5F;
-  --accent: #E4C6C7;
-  --accent-foreground: #3E2D22;
+  --background: #F9F6F1;
+  --foreground: #2B2B2B;
+  --card: #F3EDE3;
+  --card-foreground: #2B2B2B;
+  --popover: #F3EDE3;
+  --popover-foreground: #2B2B2B;
+  --primary: #3A2E2A;
+  --primary-foreground: #F9F6F1;
+  --secondary: #D97C7C;
+  --secondary-foreground: #F9F6F1;
+  --muted: #E8DCC3;
+  --muted-foreground: #3A2E2A;
+  --accent: #C9A96E;
+  --accent-foreground: #2B2B2B;
   --destructive: #c44;
   --destructive-foreground: #fff;
-  --border: rgba(90, 67, 52, 0.12);
-  --input: rgba(90, 67, 52, 0.12);
-  --ring: #D4BF8D;
+  --border: #BFA6A0;
+  --input: #BFA6A0;
+  --ring: #C9A96E;
   --radius: 1rem;
 }
 

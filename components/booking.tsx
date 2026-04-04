@@ -48,7 +48,7 @@ export function Booking() {
       const { getCalApi } = await import("@calcom/embed-react")
       const cal = await getCalApi({ namespace: "reserver-une-seance-de-pilates-reformer" })
       cal("ui", {
-        styles: { branding: { brandColor: "#3E2D22" } },
+        styles: { branding: { brandColor: "#3A2E2A" } },
         hideEventTypeDetails: true,
         layout: "month_view",
       })
