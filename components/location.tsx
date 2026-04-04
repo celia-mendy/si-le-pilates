@@ -82,14 +82,14 @@ export function Location() {
           <div className="reveal opacity-0 translate-y-8 transition-all duration-1000 delay-300">
             <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl shadow-cocoa/10">
               <iframe
-                src="https://maps.google.com/maps?q=Gare+de+Cergy&output=embed&hl=fr&z=15"
+                src="https://maps.google.com/maps?q=34+rue+Pierre+Butin+95300+Pontoise&output=embed&hl=fr&z=16"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Localisation Si Le Pilates — Gare de Cergy"
+                title="Localisation Si Le Pilates — Pontoise"
                 className="absolute inset-0 w-full h-full dark:invert dark:hue-rotate-180 dark:saturate-[0.8]"
               />
             </div>
