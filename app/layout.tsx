@@ -18,16 +18,31 @@ const cormorant = Cormorant_Garamond({
   display: 'swap',
 });
 
+const siteUrl = 'https://si-lepilates.com'
+const title = 'Si Le Pilates | Studio de Pilates Reformer à Cergy-Pontoise'
+const description = 'Si Le Pilates est un studio de Pilates Reformer à Cergy-Pontoise, pensé pour offrir une expérience élégante, apaisante et facile à vivre. Réservez votre séance en ligne.'
+
 export const metadata: Metadata = {
-  title: 'Si Le Pilates | Studio de Pilates Reformer à Cergy-Pontoise',
-  description: 'Si Le Pilates est un studio de Pilates Reformer à Cergy-Pontoise, pensé pour offrir une expérience élégante, apaisante et facile à vivre. Réservez votre séance en ligne.',
+  title,
+  description,
   keywords: ['Pilates', 'Pilates Reformer', 'Cergy-Pontoise', 'Studio Pilates', 'Cours de Pilates', 'Si Le Pilates'],
   authors: [{ name: 'Si Le Pilates' }],
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: siteUrl,
+  },
   openGraph: {
-    title: 'Si Le Pilates | Studio de Pilates Reformer à Cergy-Pontoise',
-    description: 'Un studio de Pilates Reformer premium, calme et élégant. Réservez votre séance en ligne.',
+    title,
+    description,
+    url: siteUrl,
+    siteName: 'Si Le Pilates',
     type: 'website',
     locale: 'fr_FR',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
   },
 }
 
