@@ -14,7 +14,7 @@ export default async function OGImage() {
         <img
           src={`${siteUrl}/images/GDP_11+Large.jpeg`}
           alt=""
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+          width={1200} height={630} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
         />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(58,47,42,0.08) 0%, rgba(58,47,42,0.75) 100%)', display: 'flex' }} />
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 4, background: '#C98580', display: 'flex' }} />
