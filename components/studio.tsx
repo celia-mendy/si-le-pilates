@@ -52,10 +52,10 @@ export function Studio() {
               {t.studio.title}
             </h2>
             <div className="space-y-6">
-              <p className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-200 text-lg text-soft-taupe leading-relaxed">
+              <p className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-200 text-lg text-soft-taupe leading-relaxed whitespace-pre-line">
                 {t.studio.p1}
               </p>
-              <p className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-300 text-lg text-soft-taupe leading-relaxed">
+              <p className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-300 text-lg text-soft-taupe leading-relaxed whitespace-pre-line">
                 {t.studio.p2}
               </p>
             </div>

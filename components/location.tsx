@@ -39,7 +39,7 @@ export function Location() {
             <h2 className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-100 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-deep-brown dark:text-foreground mb-8 text-balance">
               {loc.title}
             </h2>
-            <p className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-200 text-lg text-soft-taupe leading-relaxed mb-12">
+            <p className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-200 text-lg text-soft-taupe leading-relaxed mb-12 whitespace-pre-line">
               {loc.body}
             </p>
 
@@ -62,7 +62,7 @@ export function Location() {
                 </div>
                 <div>
                   <h3 className="font-medium text-deep-brown dark:text-foreground mb-1">{loc.access.label}</h3>
-                  <p className="text-soft-taupe">{loc.access.text}</p>
+                  <p className="text-soft-taupe whitespace-pre-line">{loc.access.text}</p>
                 </div>
               </div>
 

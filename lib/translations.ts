@@ -14,9 +14,9 @@ const fr = {
   hero: {
     eyebrow: "Studio de Pilates Reformer",
     title1: "Le calme du lieu.",
-    title2: "La simplicité pour réserver.",
+    title2: "La simplicité\npour réserver.",
     subtitle:
-      "Si Le Pilates est un studio de Pilates Reformer à Cergy-Pontoise, pensé pour offrir une expérience élégante, apaisante et facile à vivre.",
+      "Si Le Pilates est un studio de Pilates Reformer à Cergy-Pontoise,\npensé pour offrir une expérience élégante, apaisante et facile à vivre.",
     ctaPrimary: "Réserver une séance",
     ctaSecondary: "Découvrir le studio",
     scroll: "Scroll",
@@ -30,8 +30,8 @@ const fr = {
   studio: {
     overline: "Le studio",
     title: "Un lieu doux, élégant et lumineux.",
-    p1: "Dès l'entrée, Si Le Pilates a été pensé pour que l'on se sente bien. Les matières sont chaleureuses, les tons sont apaisants, et chaque détail accompagne cette idée d'un mouvement plus conscient.",
-    p2: "Les cours se déroulent en petit groupe pour préserver la qualité de l'accompagnement et la sensation d'un lieu à taille humaine.",
+    p1: "Dès l'entrée, Si Le Pilates a été pensé pour que l'on se sente bien. Les matières sont chaleureuses, les tons sont apaisants,\net chaque détail accompagne cette idée d'un mouvement plus conscient.",
+    p2: "Les cours se déroulent en petit groupe pour préserver la qualité\nde l'accompagnement et la sensation d'un lieu à taille humaine.",
     imgAlt:
       "Intérieur lumineux du studio Si Le Pilates avec machines Pilates Reformer",
   },
@@ -57,7 +57,7 @@ const fr = {
     overline: "L'expérience",
     title: "Une pratique guidée, dans un cadre serein.",
     subtitle:
-      "L'énergie du collectif, avec l'attention et la précision qui comptent vraiment.",
+      "L'énergie du collectif, avec l'attention et la précision\nqui comptent vraiment.",
     cta: "Voir les disponibilités",
     formats: [
       {
@@ -74,22 +74,22 @@ const fr = {
     overline: "Tarifs",
     title: "Une offre simple pour commencer.",
     subtitle:
-      "Une première formule claire, pensée pour découvrir le studio et installer une pratique régulière.",
+      "Une première formule claire, pensée pour découvrir le studio\net installer une pratique régulière.",
     badge: "Offre découverte",
     sessions: "3 séances",
     amount: "90€",
     description:
-      "Une manière simple d'entrer dans l'univers Si Le Pilates, de découvrir le lieu et de trouver votre rythme.",
+      "Une manière simple d'entrer dans l'univers\nSi Le Pilates, de découvrir le lieu et de trouver\nvotre rythme.",
     cta: "Réserver maintenant",
   },
   location: {
     overline: "Localisation",
     title: "Au cœur de Cergy-Pontoise.",
-    body: "Un studio accessible, apaisant et pensé comme une vraie bulle dans le rythme du quotidien.",
+    body: "Un studio accessible, apaisant et pensé\ncomme une vraie bulle dans le rythme du quotidien.",
     address: { label: "Adresse", line1: "34, rue Pierre Butin", line2: "95300 Pontoise" },
     access: {
       label: "Accès",
-      text: "Confirmation envoyée par email après réservation avec toutes les informations utiles.",
+      text: "Confirmation envoyée par email\naprès réservation avec toutes les informations utiles.",
     },
     contact: { label: "Contact", email: "contact@silpilate.fr" },
   },
@@ -119,7 +119,7 @@ const fr = {
     overline: "Réservation",
     title: "Réserver votre séance",
     subtitle:
-      "Choisissez votre créneau directement en ligne. Une réservation simple, pensée pour revenir facilement chaque fois que vous en avez envie.",
+      "Choisissez votre créneau directement en ligne.\nUne réservation simple, pensée pour revenir facilement chaque\nfois que vous en avez envie.",
   },
   footer: {
     description:
