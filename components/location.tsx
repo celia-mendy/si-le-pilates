@@ -43,7 +43,7 @@ export function Location() {
             </p>
 
             {/* Title */}
-            <h2 className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-100 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-deep-brown mb-8 text-balance">
+            <h2 className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-100 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-deep-brown dark:text-foreground mb-8 text-balance">
               Au cœur de Cergy-Pontoise.
             </h2>
 
@@ -56,11 +56,11 @@ export function Location() {
             {/* Info Blocks */}
             <div className="space-y-6">
               <div className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-300 flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-warm-beige/60 flex items-center justify-center text-cocoa shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-warm-beige/60 flex items-center justify-center text-cocoa dark:text-muted-gold shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-deep-brown mb-1">Adresse</h3>
+                  <h3 className="font-medium text-deep-brown dark:text-foreground mb-1">Adresse</h3>
                   <p className="text-soft-taupe">
                     Gare de Cergy
                     <br />
@@ -70,11 +70,11 @@ export function Location() {
               </div>
 
               <div className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-400 flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-warm-beige/60 flex items-center justify-center text-cocoa shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-warm-beige/60 flex items-center justify-center text-cocoa dark:text-muted-gold shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-deep-brown mb-1">Accès</h3>
+                  <h3 className="font-medium text-deep-brown dark:text-foreground mb-1">Accès</h3>
                   <p className="text-soft-taupe">
                     Confirmation envoyée par email après réservation avec toutes les informations
                     utiles.
@@ -83,11 +83,11 @@ export function Location() {
               </div>
 
               <div className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-500 flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-warm-beige/60 flex items-center justify-center text-cocoa shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-warm-beige/60 flex items-center justify-center text-cocoa dark:text-muted-gold shrink-0">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-deep-brown mb-1">Contact</h3>
+                  <h3 className="font-medium text-deep-brown dark:text-foreground mb-1">Contact</h3>
                   <p className="text-soft-taupe">contact@silpilate.fr</p>
                 </div>
               </div>
@@ -106,7 +106,7 @@ export function Location() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Localisation Silpilate — Gare de Cergy"
-                className="absolute inset-0 w-full h-full"
+                className="absolute inset-0 w-full h-full dark:invert dark:hue-rotate-180 dark:saturate-[0.8]"
               />
             </div>
           </div>

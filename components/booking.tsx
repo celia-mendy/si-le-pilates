@@ -68,7 +68,7 @@ export function Booking() {
           <p className="reveal opacity-0 translate-y-6 transition-all duration-700 mb-6 text-xs sm:text-sm uppercase tracking-[0.2em] text-muted-gold font-medium">
             Réservation
           </p>
-          <h2 className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-100 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-deep-brown mb-6 text-balance">
+          <h2 className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-100 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-deep-brown dark:text-foreground mb-6 text-balance">
             Réserver votre séance
           </h2>
           <p className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-200 text-lg sm:text-xl text-soft-taupe max-w-2xl mx-auto">
@@ -79,7 +79,7 @@ export function Booking() {
 
         {/* Cal.com Embed Container */}
         <div className="reveal opacity-0 translate-y-8 transition-all duration-1000 delay-300">
-          <div className="bg-white rounded-[2rem] p-4 sm:p-6 lg:p-8 shadow-2xl shadow-cocoa/10 overflow-hidden">
+          <div className="bg-white dark:bg-card rounded-[2rem] p-4 sm:p-6 lg:p-8 shadow-2xl shadow-cocoa/10 overflow-hidden">
             <div className="cal-embed-container rounded-2xl overflow-hidden">
               {calLoaded && (
                 <Cal

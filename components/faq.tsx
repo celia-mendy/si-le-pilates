@@ -55,7 +55,7 @@ export function FAQ() {
     <section
       ref={sectionRef}
       id="faq"
-      className="py-24 sm:py-32 lg:py-40 bg-white"
+      className="py-24 sm:py-32 lg:py-40 bg-white dark:bg-card"
     >
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -63,7 +63,7 @@ export function FAQ() {
           <p className="reveal opacity-0 translate-y-6 transition-all duration-700 mb-6 text-xs sm:text-sm uppercase tracking-[0.2em] text-muted-gold font-medium">
             FAQ
           </p>
-          <h2 className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-100 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-deep-brown text-balance">
+          <h2 className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-100 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-deep-brown dark:text-foreground text-balance">
             Questions fréquentes
           </h2>
         </div>
@@ -76,15 +76,15 @@ export function FAQ() {
               className={`reveal opacity-0 translate-y-6 transition-all duration-700`}
               style={{ transitionDelay: `${200 + index * 100}ms` }}
             >
-              <div className="bg-cream rounded-2xl overflow-hidden">
+              <div className="bg-cream dark:bg-muted rounded-2xl overflow-hidden">
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                   className="w-full flex items-center justify-between p-6 text-left"
                   aria-expanded={openIndex === index}
                 >
-                  <span className="font-medium text-deep-brown pr-8">{faq.question}</span>
+                  <span className="font-medium text-deep-brown dark:text-foreground pr-8">{faq.question}</span>
                   <ChevronDown
-                    className={`w-5 h-5 text-cocoa shrink-0 transition-transform duration-300 ${
+                    className={`w-5 h-5 text-cocoa dark:text-muted-gold shrink-0 transition-transform duration-300 ${
                       openIndex === index ? "rotate-180" : ""
                     }`}
                   />

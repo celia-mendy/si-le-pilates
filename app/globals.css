@@ -78,6 +78,28 @@
   --color-soft-taupe: var(--soft-taupe);
 }
 
+.dark {
+  /* Design system tokens */
+  --background: #1D1814;
+  --foreground: #F0EBE3;
+  --card: #252017;
+  --card-foreground: #F0EBE3;
+  --popover: #252017;
+  --popover-foreground: #F0EBE3;
+  --muted: #2A2318;
+  --muted-foreground: #A09088;
+  --border: #3D3028;
+  --input: #3D3028;
+  --ring: #C9A96E;
+
+  /* Brand background colors */
+  --cream: #1D1814;
+  --warm-beige: #262018;
+  --sand: #252017;
+  --powder-rose: #3D2E2E;
+  --soft-taupe: #A09088;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

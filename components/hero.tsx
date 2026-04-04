@@ -55,19 +55,19 @@ export function Hero() {
         className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center pt-20"
       >
         {/* Eyebrow */}
-        <p className="mb-6 text-xs sm:text-sm uppercase tracking-[0.2em] text-soft-taupe font-medium">
+        <p className="mb-6 text-xs sm:text-sm uppercase tracking-[0.2em] text-cocoa dark:text-foreground/70 font-medium">
           Studio de Pilates Reformer
         </p>
 
         {/* Main Title */}
-        <h1 className="font-serif text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-medium leading-[1.05] text-deep-brown text-balance mb-8">
+        <h1 className="font-serif text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-medium leading-[1.05] text-deep-brown dark:text-foreground text-balance mb-8">
           Le calme du lieu.
           <br />
-          <span className="text-cocoa">La simplicité pour réserver.</span>
+          <span className="text-cocoa dark:text-foreground/80">La simplicité pour réserver.</span>
         </h1>
 
         {/* Subtitle */}
-        <p className="mx-auto max-w-2xl text-lg sm:text-xl text-soft-taupe leading-relaxed mb-12">
+        <p className="mx-auto max-w-2xl text-lg sm:text-xl text-cocoa/80 dark:text-foreground/70 leading-relaxed mb-12">
           Silpilate est un studio de Pilates Reformer à Cergy-Pontoise, pensé pour offrir une
           expérience élégante, apaisante et facile à vivre.
         </p>
@@ -76,13 +76,13 @@ export function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={() => scrollToSection("booking")}
-            className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-deep-brown rounded-full hover:bg-cocoa transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-deep-brown/20"
+            className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-deep-brown rounded-full hover:bg-cocoa transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-deep-brown/20 dark:bg-foreground dark:text-background dark:hover:bg-foreground/90"
           >
             Réserver une séance
           </button>
           <button
             onClick={() => scrollToSection("studio")}
-            className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-deep-brown bg-white/60 backdrop-blur-sm rounded-full hover:bg-white/80 transition-all duration-300 border border-cocoa/10"
+            className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-deep-brown dark:text-foreground bg-white/60 dark:bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/80 dark:hover:bg-white/20 transition-all duration-300 border border-cocoa/10 dark:border-foreground/20"
           >
             Découvrir le studio
           </button>
@@ -90,7 +90,7 @@ export function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-soft-taupe">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-cocoa/60 dark:text-foreground/40">
         <span className="text-xs uppercase tracking-widest">Scroll</span>
         <div className="w-px h-12 bg-gradient-to-b from-soft-taupe to-transparent" />
       </div>

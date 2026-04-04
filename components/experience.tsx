@@ -58,7 +58,7 @@ export function Experience() {
           <p className="reveal opacity-0 translate-y-6 transition-all duration-700 mb-6 text-xs sm:text-sm uppercase tracking-[0.2em] text-muted-gold font-medium">
             {"L'expérience"}
           </p>
-          <h2 className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-100 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-deep-brown mb-6 text-balance">
+          <h2 className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-100 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-deep-brown dark:text-foreground mb-6 text-balance">
             Une pratique guidée, dans un cadre serein.
           </h2>
           <p className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-200 text-lg sm:text-xl text-soft-taupe max-w-2xl mx-auto">
@@ -74,7 +74,7 @@ export function Experience() {
               className={`reveal opacity-0 translate-y-8 transition-all duration-700`}
               style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
-              <div className="group relative bg-white rounded-3xl overflow-hidden shadow-lg shadow-cocoa/5 hover:shadow-xl hover:shadow-cocoa/10 transition-all duration-500">
+              <div className="group relative bg-white dark:bg-card rounded-3xl overflow-hidden shadow-lg shadow-cocoa/5 hover:shadow-xl hover:shadow-cocoa/10 transition-all duration-500">
                 <div className="aspect-[16/10] relative overflow-hidden">
                   <Image
                     src={format.image}
@@ -86,7 +86,7 @@ export function Experience() {
                   <div className="absolute inset-0 bg-gradient-to-t from-deep-brown/20 to-transparent" />
                 </div>
                 <div className="p-8">
-                  <h3 className="font-serif text-2xl lg:text-3xl font-medium text-deep-brown mb-3">
+                  <h3 className="font-serif text-2xl lg:text-3xl font-medium text-deep-brown dark:text-foreground mb-3">
                     {format.title}
                   </h3>
                   <p className="text-soft-taupe leading-relaxed">

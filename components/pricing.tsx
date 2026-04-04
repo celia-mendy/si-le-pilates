@@ -45,7 +45,7 @@ export function Pricing() {
           <p className="reveal opacity-0 translate-y-6 transition-all duration-700 mb-6 text-xs sm:text-sm uppercase tracking-[0.2em] text-muted-gold font-medium">
             Tarifs
           </p>
-          <h2 className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-100 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-deep-brown mb-6 text-balance">
+          <h2 className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-100 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-deep-brown dark:text-foreground mb-6 text-balance">
             Une offre simple pour commencer.
           </h2>
           <p className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-200 text-lg sm:text-xl text-soft-taupe max-w-2xl mx-auto">
@@ -56,23 +56,23 @@ export function Pricing() {
 
         {/* Featured Offer Card */}
         <div className="reveal opacity-0 translate-y-8 transition-all duration-700 delay-300">
-          <div className="relative bg-white rounded-[2rem] p-8 sm:p-12 lg:p-16 shadow-2xl shadow-cocoa/10 text-center overflow-hidden">
+          <div className="relative bg-white dark:bg-card rounded-[2rem] p-8 sm:p-12 lg:p-16 shadow-2xl shadow-cocoa/10 text-center overflow-hidden">
             {/* Decorative elements */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-powder-rose/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-muted-gold/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
             <div className="relative">
               {/* Badge */}
-              <span className="inline-flex items-center px-4 py-1.5 bg-muted-gold/20 text-cocoa text-sm font-medium rounded-full mb-8">
+              <span className="inline-flex items-center px-4 py-1.5 bg-muted-gold/20 text-cocoa dark:text-muted-gold text-sm font-medium rounded-full mb-8">
                 Offre découverte
               </span>
 
               {/* Price */}
               <div className="mb-8">
-                <span className="font-serif text-6xl sm:text-7xl lg:text-8xl font-medium text-deep-brown">
+                <span className="font-serif text-6xl sm:text-7xl lg:text-8xl font-medium text-deep-brown dark:text-foreground">
                   3 séances
                 </span>
-                <span className="block mt-2 font-serif text-4xl sm:text-5xl text-cocoa">
+                <span className="block mt-2 font-serif text-4xl sm:text-5xl text-cocoa dark:text-muted-gold">
                   90€
                 </span>
               </div>

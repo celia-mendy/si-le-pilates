@@ -36,7 +36,7 @@ export function Intro() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 sm:py-32 lg:py-40 bg-white"
+      className="py-24 sm:py-32 lg:py-40 bg-white dark:bg-card"
     >
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         {/* Label */}
@@ -45,7 +45,7 @@ export function Intro() {
         </p>
 
         {/* Title */}
-        <h2 className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-100 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-deep-brown mb-8 text-balance">
+        <h2 className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-100 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-deep-brown dark:text-foreground mb-8 text-balance">
           Un studio pensé comme une parenthèse.
         </h2>
 
@@ -61,7 +61,7 @@ export function Intro() {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="px-5 py-2.5 bg-warm-beige/50 rounded-full text-sm text-cocoa font-medium"
+              className="px-5 py-2.5 bg-warm-beige/50 rounded-full text-sm text-cocoa dark:text-foreground font-medium"
             >
               {stat.label}
             </div>

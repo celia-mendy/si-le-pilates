@@ -73,7 +73,7 @@ export function Benefits() {
           <p className="reveal opacity-0 translate-y-6 transition-all duration-700 mb-6 text-xs sm:text-sm uppercase tracking-[0.2em] text-muted-gold font-medium">
             Les bénéfices
           </p>
-          <h2 className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-100 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-deep-brown text-balance">
+          <h2 className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-100 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-deep-brown dark:text-foreground text-balance">
             Renforcer, respirer, retrouver de l&apos;aisance.
           </h2>
         </div>
@@ -86,11 +86,11 @@ export function Benefits() {
               className={`reveal opacity-0 translate-y-8 transition-all duration-700`}
               style={{ transitionDelay: `${200 + index * 100}ms` }}
             >
-              <div className="bg-white rounded-3xl p-8 lg:p-10 h-full shadow-lg shadow-cocoa/5 hover:shadow-xl hover:shadow-cocoa/10 transition-shadow duration-500">
-                <div className="w-16 h-16 rounded-2xl bg-powder-rose/30 flex items-center justify-center text-cocoa mb-6">
+              <div className="bg-white dark:bg-card rounded-3xl p-8 lg:p-10 h-full shadow-lg shadow-cocoa/5 hover:shadow-xl hover:shadow-cocoa/10 transition-shadow duration-500">
+                <div className="w-16 h-16 rounded-2xl bg-powder-rose/30 flex items-center justify-center text-cocoa dark:text-muted-gold mb-6">
                   {benefit.icon}
                 </div>
-                <h3 className="font-serif text-2xl lg:text-3xl font-medium text-deep-brown mb-4">
+                <h3 className="font-serif text-2xl lg:text-3xl font-medium text-deep-brown dark:text-foreground mb-4">
                   {benefit.title}
                 </h3>
                 <p className="text-soft-taupe leading-relaxed">
