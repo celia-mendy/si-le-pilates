@@ -4,7 +4,6 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { ThemeFamilyToggle } from "@/components/theme-family-toggle"
 import { LanguageToggle } from "@/components/language-toggle"
 import { useLanguage } from "@/contexts/language-context"
 
@@ -24,6 +23,10 @@ export function Navbar() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
   }
 
+  const navLinkStyle = {
+    color: "var(--th-text-muted)",
+  }
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -40,12 +43,13 @@ export function Navbar() {
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 sm:h-20 items-center justify-between">
-          {/* Left — Desktop */}
+
+          {/* ── Desktop left ── */}
           <div className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection("localisation")}
               className="text-sm transition-colors"
-              style={{ color: "var(--th-text-muted)" }}
+              style={navLinkStyle}
               onMouseEnter={(e) => (e.currentTarget.style.color = "var(--th-text)")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "var(--th-text-muted)")}
             >
@@ -54,7 +58,7 @@ export function Navbar() {
             <button
               onClick={() => scrollToSection("faq")}
               className="text-sm transition-colors"
-              style={{ color: "var(--th-text-muted)" }}
+              style={navLinkStyle}
               onMouseEnter={(e) => (e.currentTarget.style.color = "var(--th-text)")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "var(--th-text-muted)")}
             >
@@ -62,7 +66,7 @@ export function Navbar() {
             </button>
           </div>
 
-          {/* Logo — Center */}
+          {/* ── Logo — centered ── */}
           <Link
             href="/"
             className="absolute left-1/2 -translate-x-1/2 font-serif text-2xl sm:text-3xl font-semibold tracking-wide whitespace-nowrap"
@@ -71,12 +75,12 @@ export function Navbar() {
             {t.brand}
           </Link>
 
-          {/* Right — Desktop */}
+          {/* ── Desktop right ── */}
           <div className="hidden md:flex items-center gap-3">
             <button
               onClick={() => scrollToSection("tarifs")}
               className="text-sm transition-colors"
-              style={{ color: "var(--th-text-muted)" }}
+              style={navLinkStyle}
               onMouseEnter={(e) => (e.currentTarget.style.color = "var(--th-text)")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "var(--th-text-muted)")}
             >
@@ -88,68 +92,71 @@ export function Navbar() {
             >
               {t.nav.book}
             </button>
-            <ThemeFamilyToggle />
             <LanguageToggle />
             <ThemeToggle />
           </div>
 
-          {/* Mobile right */}
-          <div className="flex md:hidden ml-auto items-center gap-2">
-            <LanguageToggle />
-            <ThemeToggle />
+          {/* ── Mobile right — hamburger only ── */}
+          <div className="flex md:hidden ml-auto">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2"
+              className="p-2 rounded-full transition-colors"
               style={{ color: "var(--th-text)" }}
               aria-label={isMobileMenuOpen ? t.nav.mobileAriaClose : t.nav.mobileAriaOpen}
             >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* ── Mobile menu ── */}
         {isMobileMenuOpen && (
           <div
-            className="md:hidden absolute top-full left-0 right-0 backdrop-blur-md border-b py-4"
+            className="md:hidden absolute top-full left-0 right-0 backdrop-blur-md border-b"
             style={{
-              background: "color-mix(in srgb, var(--background) 95%, transparent)",
-              borderColor: "color-mix(in srgb, var(--th-border) 70%, transparent)",
+              background: "color-mix(in srgb, var(--background) 96%, transparent)",
+              borderColor: "color-mix(in srgb, var(--th-border) 60%, transparent)",
             }}
           >
-            <div className="flex flex-col gap-4 px-4">
-              <button
-                onClick={() => scrollToSection("localisation")}
-                className="text-left py-2 transition-colors"
-                style={{ color: "var(--th-text-muted)" }}
-              >
-                {t.nav.location}
-              </button>
-              <button
-                onClick={() => scrollToSection("faq")}
-                className="text-left py-2 transition-colors"
-                style={{ color: "var(--th-text-muted)" }}
-              >
-                {t.nav.faq}
-              </button>
-              <button
-                onClick={() => scrollToSection("tarifs")}
-                className="text-left py-2 transition-colors"
-                style={{ color: "var(--th-text-muted)" }}
-              >
-                {t.nav.pricing}
-              </button>
+            <div className="flex flex-col px-6 py-6 gap-1">
+              {/* Nav links */}
+              {[
+                { label: t.nav.location, id: "localisation" },
+                { label: t.nav.faq, id: "faq" },
+                { label: t.nav.pricing, id: "tarifs" },
+              ].map(({ label, id }) => (
+                <button
+                  key={id}
+                  onClick={() => scrollToSection(id)}
+                  className="text-left py-3 text-base font-medium transition-colors border-b"
+                  style={{
+                    color: "var(--th-text)",
+                    borderColor: "color-mix(in srgb, var(--th-border) 40%, transparent)",
+                  }}
+                >
+                  {label}
+                </button>
+              ))}
+
+              {/* Book CTA */}
               <button
                 onClick={() => scrollToSection("booking")}
-                className="btn-primary inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-full w-full"
+                className="btn-primary inline-flex items-center justify-center px-5 py-3.5 text-base font-medium rounded-full w-full mt-4"
               >
                 {t.nav.book}
               </button>
-              <div className="flex items-center gap-3 py-1">
+
+              {/* Controls row */}
+              <div className="flex items-center justify-between mt-5 pt-4"
+                style={{ borderTop: "1px solid color-mix(in srgb, var(--th-border) 40%, transparent)" }}
+              >
                 <span className="text-sm" style={{ color: "var(--th-text-muted)" }}>
-                  {t.nav.palette}
+                  Langue / Theme
                 </span>
-                <ThemeFamilyToggle />
+                <div className="flex items-center gap-2">
+                  <LanguageToggle />
+                  <ThemeToggle />
+                </div>
               </div>
             </div>
           </div>

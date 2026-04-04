@@ -48,7 +48,7 @@ export default function RootLayout({
         {/* Flash-free init: theme-family + theme-mode avant hydration */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var f=localStorage.getItem('silpilate-theme-family')||'v2';document.documentElement.setAttribute('data-theme-family',f);var t=localStorage.getItem('theme')||'system';var dark=t==='dark'||(t==='system'&&window.matchMedia('(prefers-color-scheme:dark)').matches);document.documentElement.setAttribute('data-theme-mode',dark?'dark':'light');}catch(e){}})();`,
+            __html: `(function(){try{document.documentElement.setAttribute('data-theme-family','v2');var t=localStorage.getItem('theme')||'system';var dark=t==='dark'||(t==='system'&&window.matchMedia('(prefers-color-scheme:dark)').matches);document.documentElement.setAttribute('data-theme-mode',dark?'dark':'light');}catch(e){}})();`,
           }}
         />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
