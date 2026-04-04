@@ -1,0 +1,117 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Silpilate Brand Colors */
+  --cream: #F7F1E8;
+  --warm-beige: #E8DCC8;
+  --sand: #D9C6AA;
+  --blush: #D8A7A7;
+  --powder-rose: #E4C6C7;
+  --muted-gold: #D4BF8D;
+  --cocoa: #5A4334;
+  --deep-brown: #3E2D22;
+  --soft-taupe: #7C6A5F;
+  
+  /* Design System Tokens */
+  --background: #F7F1E8;
+  --foreground: #3E2D22;
+  --card: #FFFFFF;
+  --card-foreground: #3E2D22;
+  --popover: #FFFFFF;
+  --popover-foreground: #3E2D22;
+  --primary: #3E2D22;
+  --primary-foreground: #FFFFFF;
+  --secondary: rgba(255, 255, 255, 0.55);
+  --secondary-foreground: #3E2D22;
+  --muted: #E8DCC8;
+  --muted-foreground: #7C6A5F;
+  --accent: #E4C6C7;
+  --accent-foreground: #3E2D22;
+  --destructive: #c44;
+  --destructive-foreground: #fff;
+  --border: rgba(90, 67, 52, 0.12);
+  --input: rgba(90, 67, 52, 0.12);
+  --ring: #D4BF8D;
+  --radius: 1rem;
+}
+
+@theme inline {
+  --font-sans: 'Inter', 'Inter Fallback', sans-serif;
+  --font-serif: 'Cormorant Garamond', 'Cormorant Garamond Fallback', serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  
+  /* Brand Colors */
+  --color-cream: var(--cream);
+  --color-warm-beige: var(--warm-beige);
+  --color-sand: var(--sand);
+  --color-blush: var(--blush);
+  --color-powder-rose: var(--powder-rose);
+  --color-muted-gold: var(--muted-gold);
+  --color-cocoa: var(--cocoa);
+  --color-deep-brown: var(--deep-brown);
+  --color-soft-taupe: var(--soft-taupe);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Cal.com Embed Styles */
+.cal-embed-container {
+  min-height: 700px;
+}
+
+@media (max-width: 640px) {
+  .cal-embed-container {
+    min-height: 600px;
+  }
+}
