@@ -27,7 +27,7 @@ export function Footer() {
               {t.footer.description}
             </p>
             <a
-              href="https://instagram.com/silpilate"
+              href="https://www.instagram.com/silepilatespontoise/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors"
