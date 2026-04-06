@@ -98,20 +98,28 @@ const fr = {
     title: "Questions fréquentes",
     items: [
       {
-        q: "Le studio est-il accessible aux débutants ?",
-        a: "Oui. Les séances sont pensées pour accueillir aussi bien les débutants que les personnes ayant déjà une pratique régulière.",
+        q: "Quelle est la différence entre Pilates Reformer et Fitness Reformer ?",
+        a: "Les deux cours se pratiquent sur le même appareil, le Reformer, mais avec des objectifs différents.\n\nPILATES REFORMER : travail en profondeur du gainage, de la posture et de la mobilité, dans une approche douce et contrôlée.\n\nFITNESS REFORMER : séance plus dynamique et cardio, axée sur le renforcement musculaire et la dépense énergétique.",
       },
       {
-        q: "Comment réserver une séance ?",
-        a: "La réservation se fait en ligne, en choisissant directement le créneau qui vous convient en bas de cette page.",
+        q: "Les cours sont-ils accessibles à tous les niveaux ?",
+        a: "Les cours sont accessibles à tous, du débutant au pratiquant confirmé. Chaque séance est adaptée au niveau et aux besoins de chacun.",
       },
       {
-        q: "Y a-t-il des cours en petit groupe ?",
-        a: "Oui. Si Le Pilates privilégie les petits groupes afin de conserver une pratique confortable et un accompagnement attentif.",
+        q: "Les cours sont-ils mixtes ?",
+        a: "Certains créneaux, encadrés par des professeurs masculins, sont ouverts à une pratique mixte.",
       },
       {
-        q: "Recevrai-je une confirmation après réservation ?",
-        a: "Oui. Une confirmation vous est envoyée immédiatement après la réservation, avec les informations utiles.",
+        q: "Que faut-il apporter pour une séance ?",
+        a: "Nous vous recommandons de venir avec une tenue confortable. Les chaussettes antidérapantes sont conseillées.",
+      },
+      {
+        q: "Y a-t-il des vestiaires sur place ?",
+        a: "Un espace d'accueil est à votre disposition pour vous préparer avant la séance.",
+      },
+      {
+        q: "Le planning est-il amené à évoluer ?",
+        a: "Oui, le planning est volontairement limité au lancement afin de garantir la qualité de l'accompagnement. De nouveaux créneaux seront progressivement ouverts.",
       },
     ],
   },
@@ -239,20 +247,28 @@ const en: typeof fr = {
     title: "Frequently asked questions",
     items: [
       {
-        q: "Is the studio suitable for beginners?",
-        a: "Yes. Sessions are designed to welcome both beginners and those who already have a regular practice.",
+        q: "What is the difference between Pilates Reformer and Fitness Reformer?",
+        a: "Both classes are practised on the same machine, the Reformer, but with different goals.\n\nPILATES REFORMER: an in-depth workout focused on core strength, posture, and mobility, in a gentle and controlled approach.\n\nFITNESS REFORMER: a more dynamic, cardio-oriented session focused on muscle strengthening and energy expenditure.",
       },
       {
-        q: "How do I book a session?",
-        a: "Booking is done online — simply choose a time slot that suits you from the widget at the bottom of this page.",
+        q: "Are the classes suitable for all levels?",
+        a: "Classes are open to everyone, from complete beginners to experienced practitioners. Each session is adapted to your level and your individual needs.",
       },
       {
-        q: "Are there small group classes?",
-        a: "Yes. Si Le Pilates prioritises small groups to maintain a comfortable practice and attentive guidance.",
+        q: "Are the classes mixed gender?",
+        a: "Some sessions, led by male instructors, are open to mixed-gender practice.",
       },
       {
-        q: "Will I receive a confirmation after booking?",
-        a: "Yes. A confirmation is sent immediately after booking, with all the useful information.",
+        q: "What should I bring to a session?",
+        a: "We recommend wearing comfortable workout clothes. Non-slip socks are advised.",
+      },
+      {
+        q: "Are there changing facilities on site?",
+        a: "A welcome area is available for you to get ready before your session.",
+      },
+      {
+        q: "Will more time slots be added?",
+        a: "Yes — we have intentionally kept the schedule limited at launch to ensure the quality of every session. New slots will be added progressively.",
       },
     ],
   },
