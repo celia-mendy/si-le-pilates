@@ -132,7 +132,7 @@ const fr = {
   footer: {
     description:
       "Studio de Pilates Reformer à Cergy-Pontoise. Un lieu calme, élégant et simple à réserver pour une pratique qui vous ressemble.",
-    instagram: "@silpilate",
+    instagram: "@silepilatespontoise",
     navTitle: "Navigation",
     contactTitle: "Contact",
     email: "team@si-lepilates.com",
@@ -281,7 +281,7 @@ const en: typeof fr = {
   footer: {
     description:
       "Pilates Reformer studio in Cergy-Pontoise. A calm, elegant space, easy to book for a practice that suits you.",
-    instagram: "@silpilate",
+    instagram: "@silepilatespontoise",
     navTitle: "Navigation",
     contactTitle: "Contact",
     email: "team@si-lepilates.com",
