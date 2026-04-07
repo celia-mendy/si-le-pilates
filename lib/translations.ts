@@ -97,10 +97,10 @@ const fr = {
     items: [
       {
         q: "Quelle est la différence entre Pilates Reformer et Fitness Reformer ?",
-        a: "Les deux cours se pratiquent sur le même appareil, le Reformer, mais avec des objectifs différents.\n\nPILATES REFORMER : travail en profondeur du gainage, de la posture et de la mobilité, dans une approche douce et contrôlée.\n\nFITNESS REFORMER : séance plus dynamique et cardio, axée sur le renforcement musculaire et la dépense énergétique.",
+        a: "Les deux cours se pratiquent sur le même appareil — le reformer — mais l'expérience est très différente !\n\n• Pilates Reformer\nCours basé sur la méthode Pilates originale. On travaille en profondeur : alignement, respiration, muscles posturaux. Les mouvements sont lents et précis. Idéal si vous voulez prendre soin de votre corps, corriger votre posture ou récupérer d'une blessure.\n\n• Fitness Reformer\nMême appareil, ambiance différente ! Les exercices sont plus dynamiques et rythmés. L'objectif : tonifier, dépenser de l'énergie et transpirer. Parfait si vous cherchez un vrai workout sur reformer.",
       },
       {
-        q: "Les cours sont-ils accessibles à tous les niveaux ?",
+        q: "À qui s'adressent les cours ?",
         a: "Les cours sont accessibles à tous, du débutant au pratiquant confirmé. Chaque séance est adaptée au niveau et aux besoins de chacun.",
       },
       {
@@ -129,12 +129,12 @@ const fr = {
   },
   footer: {
     description:
-      "Studio de Pilates Reformer à Cergy-Pontoise. Un lieu calme, élégant et simple à réserver pour une pratique qui vous ressemble.",
+      "Studio de Pilates Reformer à Pontoise.\nUn lieu calme, élégant et simple à réserver pour une pratique qui vous ressemble.",
     instagram: "@silepilatespontoise",
     navTitle: "Navigation",
     contactTitle: "Contact",
     email: "team@si-lepilates.com",
-    address: "24, rue Pierre Butin, 95300 Pontoise",
+    address: "24, rue Pierre Butin,\n95300 Pontoise",
     navItems: [
       { name: "Le studio", href: "#studio" },
       { name: "Tarifs", href: "#tarifs" },
@@ -281,7 +281,7 @@ const en: typeof fr = {
     navTitle: "Navigation",
     contactTitle: "Contact",
     email: "team@si-lepilates.com",
-    address: "24, rue Pierre Butin, 95300 Pontoise",
+    address: "24, rue Pierre Butin,\n95300 Pontoise",
     navItems: [
       { name: "The studio", href: "#studio" },
       { name: "Pricing", href: "#tarifs" },

@@ -23,11 +23,11 @@ export function Footer() {
             <Link href="/" className="font-serif text-3xl font-semibold text-white mb-4 block">
               {t.brand}
             </Link>
-            <p className="text-white/60 leading-relaxed max-w-md mb-6">
+            <p className="text-white/60 leading-relaxed max-w-md mb-6 whitespace-pre-line">
               {t.footer.description}
             </p>
             <a
-              href="https://www.instagram.com/silepilates.fr/"
+              href="https://www.instagram.com/silepilatespontoise/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors"
@@ -60,8 +60,17 @@ export function Footer() {
           <div>
             <h3 className="font-medium text-white mb-4">{t.footer.contactTitle}</h3>
             <ul className="space-y-3 text-white/60">
-              <li>{t.footer.email}</li>
-              <li>{t.footer.address}</li>
+              <li>
+                <a
+                  href={`mailto:${t.footer.email}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  {t.footer.email}
+                </a>
+              </li>
+              <li className="whitespace-pre-line">{t.footer.address}</li>
             </ul>
           </div>
         </div>

@@ -69,10 +69,10 @@ export function FAQ() {
                 </button>
                 <div
                   className={`overflow-hidden transition-all duration-300 ease-out ${
-                    openIndex === index ? "max-h-48" : "max-h-0"
+                    openIndex === index ? "max-h-screen" : "max-h-0"
                   }`}
                 >
-                  <p className="px-6 pb-6 text-soft-taupe leading-relaxed">{faq.a}</p>
+                  <p className="px-6 pb-6 text-soft-taupe leading-relaxed whitespace-pre-line">{faq.a}</p>
                 </div>
               </div>
             </div>

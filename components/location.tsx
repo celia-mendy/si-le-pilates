@@ -58,7 +58,14 @@ export function Location() {
                 </div>
                 <div>
                   <h3 className="font-medium text-deep-brown dark:text-foreground mb-1">{loc.contact.label}</h3>
-                  <p className="text-soft-taupe">{loc.contact.email}</p>
+                  <a
+                    href={`mailto:${loc.contact.email}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-soft-taupe hover:text-deep-brown transition-colors"
+                  >
+                    {loc.contact.email}
+                  </a>
                 </div>
               </div>
             </div>
