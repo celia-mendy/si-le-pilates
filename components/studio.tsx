@@ -31,15 +31,29 @@ export function Studio() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image */}
           <div className="reveal opacity-0 translate-y-8 transition-all duration-1000 order-2 lg:order-1">
-            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-cocoa/10">
-              <Image
-                src="/images/studio.jpeg"
-                alt={t.studio.imgAlt}
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-deep-brown/10 to-transparent" />
+            <div className="relative h-[520px] sm:h-[620px] lg:h-[680px]">
+              {/* Image principale — haut gauche */}
+              <div className="absolute left-0 top-0 w-[62%] h-[88%] rounded-3xl overflow-hidden shadow-2xl shadow-cocoa/10">
+                <Image
+                  src="/images/studio.jpeg"
+                  alt={t.studio.imgAlt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 62vw, 31vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-deep-brown/10 to-transparent" />
+              </div>
+              {/* Image accent (fleurs) — bas droite */}
+              <div className="absolute right-0 bottom-0 w-[55%] h-[68%] rounded-2xl overflow-hidden shadow-xl shadow-cocoa/15 ring-4 ring-cream">
+                <Image
+                  src="/images/studio2.jpeg"
+                  alt={t.studio.imgAlt2}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 55vw, 28vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-deep-brown/8 to-transparent" />
+              </div>
             </div>
           </div>
 

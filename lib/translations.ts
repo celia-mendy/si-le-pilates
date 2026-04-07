@@ -34,6 +34,7 @@ const fr = {
     p2: "Les cours se déroulent en petit groupe pour préserver la qualité\nde l'accompagnement et la sensation d'un lieu à taille humaine.",
     imgAlt:
       "Intérieur lumineux du studio Si Le Pilates avec machines Pilates Reformer",
+    imgAlt2: "Détail floral du studio",
   },
   benefits: {
     overline: "Les bénéfices",
@@ -180,6 +181,7 @@ const en: typeof fr = {
     p2: "Sessions take place in small groups to preserve the quality of guidance and the feeling of a human-scale space.",
     imgAlt:
       "Bright interior of the Si Le Pilates studio with Pilates Reformer machines",
+    imgAlt2: "Floral detail of the studio",
   },
   benefits: {
     overline: "Benefits",
