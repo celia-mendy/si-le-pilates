@@ -86,7 +86,7 @@ const fr = {
     overline: "Localisation",
     title: "Au cœur de Cergy-Pontoise.",
     body: "Un studio accessible, apaisant et pensé\ncomme une vraie bulle dans le rythme du quotidien.",
-    address: { label: "Adresse", line1: "34, rue Pierre Butin", line2: "95300 Pontoise" },
+    address: { label: "Adresse", line1: "24, rue Pierre Butin", line2: "95300 Pontoise" },
     access: {
       label: "Accès",
       text: "Confirmation envoyée par email\naprès réservation avec toutes les informations utiles.",
@@ -136,7 +136,7 @@ const fr = {
     navTitle: "Navigation",
     contactTitle: "Contact",
     email: "team@si-lepilates.com",
-    address: "34, rue Pierre Butin, 95300 Pontoise",
+    address: "24, rue Pierre Butin, 95300 Pontoise",
     navItems: [
       { name: "Le studio", href: "#studio" },
       { name: "Tarifs", href: "#tarifs" },
@@ -235,7 +235,7 @@ const en: typeof fr = {
     overline: "Location",
     title: "In the heart of Cergy-Pontoise.",
     body: "An accessible, soothing studio, designed as a true refuge from the daily rhythm.",
-    address: { label: "Address", line1: "34, rue Pierre Butin", line2: "95300 Pontoise" },
+    address: { label: "Address", line1: "24, rue Pierre Butin", line2: "95300 Pontoise" },
     access: {
       label: "Access",
       text: "A confirmation email is sent immediately after booking with all the details you need.",
@@ -285,7 +285,7 @@ const en: typeof fr = {
     navTitle: "Navigation",
     contactTitle: "Contact",
     email: "team@si-lepilates.com",
-    address: "34, rue Pierre Butin, 95300 Pontoise",
+    address: "24, rue Pierre Butin, 95300 Pontoise",
     navItems: [
       { name: "The studio", href: "#studio" },
       { name: "Pricing", href: "#tarifs" },
