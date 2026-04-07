@@ -33,7 +33,7 @@ export function Studio() {
           <div className="reveal opacity-0 translate-y-8 transition-all duration-1000 order-2 lg:order-1">
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shadow-cocoa/10">
               <Image
-                src="/images/190701_GOOD-DAY_1940.jpg"
+                src="/images/studio.jpeg"
                 alt={t.studio.imgAlt}
                 fill
                 className="object-cover"
