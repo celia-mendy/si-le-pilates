@@ -78,6 +78,12 @@ export function Experience() {
           ))}
         </div>
 
+        <div className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-400 text-center mb-12">
+          <p className="text-soft-taupe leading-relaxed max-w-2xl mx-auto">
+            {t.experience.privatisation}
+          </p>
+        </div>
+
         <div className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-500 text-center">
           <button
             onClick={scrollToBooking}

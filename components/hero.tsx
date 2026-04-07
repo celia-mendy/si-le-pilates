@@ -65,8 +65,12 @@ export function Hero() {
           style={{ color: "var(--th-text)" }}
         >
           {t.hero.title1}
-          <br />
-          <span className="whitespace-pre-line" style={{ color: "var(--th-text-muted)" }}>{t.hero.title2}</span>
+          {t.hero.title2 && (
+            <>
+              <br />
+              <span className="whitespace-pre-line" style={{ color: "var(--th-text-muted)" }}>{t.hero.title2}</span>
+            </>
+          )}
         </h1>
 
         <p

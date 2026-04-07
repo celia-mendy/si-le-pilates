@@ -13,23 +13,23 @@ const fr = {
   },
   hero: {
     eyebrow: "Studio de Pilates Reformer",
-    title1: "Le calme du lieu.",
-    title2: "La simplicité\npour réserver.",
+    title1: "Le Pilates comme une parenthèse",
+    title2: "",
     subtitle:
-      "Si Le Pilates est un studio de Pilates Reformer à Cergy-Pontoise,\npensé pour offrir une expérience élégante, apaisante et facile à vivre.",
+      "Un lieu où le corps se renforce et l'esprit s'apaise.",
     ctaPrimary: "Réserver une séance",
     ctaSecondary: "Découvrir le studio",
     scroll: "Scroll",
   },
   intro: {
     overline: "L'esprit Si Le Pilates",
-    title: "Un studio pensé comme une parenthèse.",
+    title: "Un studio pensé comme un espace suspendu, une bulle où le temps s'efface pour laisser place à l'essentiel.",
     body: "Ici, tout a été imaginé pour retrouver un corps plus aligné, une respiration plus fluide et une sensation d'équilibre durable. Le lieu est calme. La pratique est précise. La réservation reste simple.",
-    chips: ["Petit groupe", "45 min", "Cergy-Pontoise", "Réservation en ligne"],
+    chips: ["Petit groupe", "50 min", "Pontoise", "Réservation en ligne"],
   },
   studio: {
     overline: "Le studio",
-    title: "Un lieu doux, élégant et lumineux.",
+    title: "Un lieu doux et élégant.",
     p1: "Dès l'entrée, Si Le Pilates a été pensé pour que l'on se sente bien. Les matières sont chaleureuses, les tons sont apaisants,\net chaque détail accompagne cette idée d'un mouvement plus conscient.",
     p2: "Les cours se déroulent en petit groupe pour préserver la qualité\nde l'accompagnement et la sensation d'un lieu à taille humaine.",
     imgAlt:
@@ -58,6 +58,8 @@ const fr = {
     title: "Une pratique guidée, dans un cadre serein.",
     subtitle:
       "L'énergie du collectif, avec l'attention et la précision\nqui comptent vraiment.",
+    privatisation:
+      "Le studio peut être privatisé pour des moments sur mesure. Nous proposons des formats adaptés pour des occasions telles que les enterrements de vie de jeune fille, les séances en duo (couple, mère-fille…), ou encore des sessions dédiées aux entreprises. N'hésitez pas à nous contacter pour imaginer une expérience personnalisée.",
     cta: "Voir les disponibilités",
     formats: [
       {
@@ -84,13 +86,8 @@ const fr = {
   },
   location: {
     overline: "Localisation",
-    title: "Au cœur de Cergy-Pontoise.",
-    body: "Un studio accessible, apaisant et pensé\ncomme une vraie bulle dans le rythme du quotidien.",
+    title: "Au cœur de Pontoise.",
     address: { label: "Adresse", line1: "24, rue Pierre Butin", line2: "95300 Pontoise" },
-    access: {
-      label: "Accès",
-      text: "Confirmation envoyée par email\naprès réservation avec toutes les informations utiles.",
-    },
     contact: { label: "Contact", email: "team@si-lepilates.com" },
   },
   faq: {
@@ -162,23 +159,23 @@ const en: typeof fr = {
   },
   hero: {
     eyebrow: "Pilates Reformer Studio",
-    title1: "The calm of the space.",
-    title2: "The simplicity\nof booking.",
+    title1: "Pilates as a pause",
+    title2: "",
     subtitle:
-      "Si Le Pilates is a Pilates Reformer studio in Cergy-Pontoise, designed to offer an elegant, soothing and effortless experience.",
+      "A place where the body strengthens and the mind finds calm.",
     ctaPrimary: "Book a session",
     ctaSecondary: "Discover the studio",
     scroll: "Scroll",
   },
   intro: {
     overline: "The Si Le Pilates spirit",
-    title: "A studio designed as a pause.",
+    title: "A studio designed as a suspended space, a bubble where time fades to make room for what matters.",
     body: "Everything here has been crafted to help you find a more aligned body, easier breathing and a lasting sense of balance. The space is calm. The practice is precise. Booking stays simple.",
-    chips: ["Small groups", "45 min", "Cergy-Pontoise", "Online booking"],
+    chips: ["Small groups", "50 min", "Pontoise", "Online booking"],
   },
   studio: {
     overline: "The studio",
-    title: "A gentle, elegant and bright space.",
+    title: "A soft and elegant space.",
     p1: "From the moment you arrive, Si Le Pilates has been designed to make you feel at ease. The materials are warm, the tones are soothing, and every detail supports the idea of more conscious movement.",
     p2: "Sessions take place in small groups to preserve the quality of guidance and the feeling of a human-scale space.",
     imgAlt:
@@ -207,6 +204,8 @@ const en: typeof fr = {
     title: "A guided practice, in a serene setting.",
     subtitle:
       "The energy of the group, with the attention and precision that truly matter.",
+    privatisation:
+      "The studio can be privatised for bespoke moments. We offer tailored formats for occasions such as bachelorette parties, duo sessions (couples, mother-daughter…), or corporate wellness sessions. Feel free to contact us to create a personalised experience.",
     cta: "See availability",
     formats: [
       {
@@ -233,13 +232,8 @@ const en: typeof fr = {
   },
   location: {
     overline: "Location",
-    title: "In the heart of Cergy-Pontoise.",
-    body: "An accessible, soothing studio, designed as a true refuge from the daily rhythm.",
+    title: "In the heart of Pontoise.",
     address: { label: "Address", line1: "24, rue Pierre Butin", line2: "95300 Pontoise" },
-    access: {
-      label: "Access",
-      text: "A confirmation email is sent immediately after booking with all the details you need.",
-    },
     contact: { label: "Contact", email: "team@si-lepilates.com" },
   },
   faq: {

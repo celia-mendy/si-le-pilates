@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { MapPin, Mail, Phone } from "lucide-react"
+import { MapPin, Phone } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 
 export function Location() {
@@ -39,10 +39,6 @@ export function Location() {
             <h2 className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-100 font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-deep-brown dark:text-foreground mb-8 text-balance">
               {loc.title}
             </h2>
-            <p className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-200 text-lg text-soft-taupe leading-relaxed mb-12 whitespace-pre-line">
-              {loc.body}
-            </p>
-
             <div className="space-y-6">
               <div className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-300 flex items-start gap-4">
                 <div className="w-12 h-12 rounded-xl bg-warm-beige/60 flex items-center justify-center text-muted-gold shrink-0">
@@ -58,16 +54,6 @@ export function Location() {
 
               <div className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-400 flex items-start gap-4">
                 <div className="w-12 h-12 rounded-xl bg-warm-beige/60 flex items-center justify-center text-muted-gold shrink-0">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="font-medium text-deep-brown dark:text-foreground mb-1">{loc.access.label}</h3>
-                  <p className="text-soft-taupe whitespace-pre-line">{loc.access.text}</p>
-                </div>
-              </div>
-
-              <div className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-500 flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-warm-beige/60 flex items-center justify-center text-muted-gold shrink-0">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
@@ -82,7 +68,7 @@ export function Location() {
           <div className="reveal opacity-0 translate-y-8 transition-all duration-1000 delay-300">
             <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl shadow-cocoa/10">
               <iframe
-                src="https://maps.google.com/maps?q=34+rue+Pierre+Butin+95300+Pontoise&output=embed&hl=fr&z=16"
+                src="https://maps.google.com/maps?q=24+rue+Pierre+Butin+95300+Pontoise&output=embed&hl=fr&z=16"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
