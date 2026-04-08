@@ -60,7 +60,7 @@ export function Navbar() {
           {/* ── Logo — centered ── */}
           <Link
             href="/"
-            className="absolute left-1/2 -translate-x-1/2 font-serif text-2xl sm:text-3xl font-semibold tracking-wide whitespace-nowrap"
+            className="absolute left-1/2 -translate-x-1/2 font-sans text-2xl sm:text-3xl font-bold tracking-wide whitespace-nowrap"
             style={{ color: "var(--th-text)" }}
           >
             {t.brand}
