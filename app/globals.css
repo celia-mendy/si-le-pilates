@@ -1,3 +1,10 @@
+/* ═══════════════════════════════════════════════════════════════════
+   TYPOGRAPHY CONFIG — modifier ici pour changer les polices du site
+   ───────────────────────────────────────────────────────────────────
+   font-heading  : utilisé sur tous les titres (font-serif en Tailwind)
+   font-body     : utilisé sur le corps de texte (font-sans en Tailwind)
+   ═══════════════════════════════════════════════════════════════════ */
+
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
@@ -61,8 +68,9 @@
 }
 
 @theme inline {
-  --font-sans: 'Inter', 'Inter Fallback', sans-serif;
-  --font-serif: 'Cormorant Garamond', 'Cormorant Garamond Fallback', serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;                /* body */
+  --font-serif: 'Playfair Display', serif;                     /* headings principaux h1/h2 */
+  --font-ui: 'Plus Jakarta Sans', sans-serif;                  /* sous-titres h3 / UI */
   --font-mono: 'Geist Mono', 'Geist Mono Fallback', monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -278,10 +286,3 @@
   }
 }
 
-/* ─── TEST TYPO: Helvetica Neue Bold sur les titres ───────────────────
-   Pour restaurer Cormorant Garamond : supprimer ce bloc entier.
-   ──────────────────────────────────────────────────────────────────── */
-h1, h2, h3 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-}
