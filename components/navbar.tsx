@@ -55,15 +55,6 @@ export function Navbar() {
             >
               {t.nav.location}
             </button>
-            <button
-              onClick={() => scrollToSection("faq")}
-              className="text-sm transition-colors"
-              style={navLinkStyle}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--th-text)")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "var(--th-text-muted)")}
-            >
-              {t.nav.faq}
-            </button>
           </div>
 
           {/* ── Logo — centered ── */}
@@ -85,6 +76,15 @@ export function Navbar() {
               onMouseLeave={(e) => (e.currentTarget.style.color = "var(--th-text-muted)")}
             >
               {t.nav.pricing}
+            </button>
+            <button
+              onClick={() => scrollToSection("faq")}
+              className="text-sm transition-colors"
+              style={navLinkStyle}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--th-text)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "var(--th-text-muted)")}
+            >
+              {t.nav.faq}
             </button>
             <button
               onClick={() => scrollToSection("booking")}
@@ -122,8 +122,8 @@ export function Navbar() {
               {/* Nav links */}
               {[
                 { label: t.nav.location, id: "localisation" },
-                { label: t.nav.faq, id: "faq" },
                 { label: t.nav.pricing, id: "tarifs" },
+                { label: t.nav.faq, id: "faq" },
               ].map(({ label, id }) => (
                 <button
                   key={id}

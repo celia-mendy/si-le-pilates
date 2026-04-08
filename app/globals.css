@@ -277,3 +277,11 @@
     min-height: 600px;
   }
 }
+
+/* ─── TEST TYPO: Helvetica Neue Bold sur les titres ───────────────────
+   Pour restaurer Cormorant Garamond : supprimer ce bloc entier.
+   ──────────────────────────────────────────────────────────────────── */
+h1, h2, h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}

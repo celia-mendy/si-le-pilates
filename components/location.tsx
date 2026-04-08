@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { MapPin, Phone } from "lucide-react"
+import { MapPin, Phone, Train, Car } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 
 export function Location() {
@@ -66,6 +66,26 @@ export function Location() {
                   >
                     {loc.contact.email}
                   </a>
+                </div>
+              </div>
+
+              <div className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-500 flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-warm-beige/60 flex items-center justify-center text-muted-gold shrink-0">
+                  <Train className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="font-medium text-deep-brown dark:text-foreground mb-1">{loc.transport.label}</h3>
+                  <p className="text-soft-taupe">{loc.transport.text}</p>
+                </div>
+              </div>
+
+              <div className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-600 flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-warm-beige/60 flex items-center justify-center text-muted-gold shrink-0">
+                  <Car className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="font-medium text-deep-brown dark:text-foreground mb-1">{loc.parking.label}</h3>
+                  <p className="text-soft-taupe">{loc.parking.text}</p>
                 </div>
               </div>
             </div>

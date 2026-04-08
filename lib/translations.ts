@@ -78,18 +78,79 @@ const fr = {
     title: "Une offre simple pour commencer.",
     subtitle:
       "Une première formule claire, pensée pour découvrir le studio\net installer une pratique régulière.",
-    badge: "Offre découverte",
-    sessions: "3 séances",
-    amount: "90€",
-    description:
-      "Une manière simple d'entrer dans l'univers\nSi Le Pilates, de découvrir le lieu et de trouver\nvotre rythme.",
-    cta: "Réserver maintenant",
+    cta: "Réserver",
+    popularBadge: "Populaire",
+    cards: [
+      {
+        name: "Séance découverte",
+        price: "25 €",
+        credits: "1 crédit",
+        validity: "Valide 1 mois",
+        restrictions: ["Nouveaux membres", "1 achat / membre"],
+        description:
+          "Idéal pour découvrir l'univers du pilates au sein de notre studio. Venez tester notre méthode, rencontrer nos coachs et ressentir les premiers bienfaits du Pilates sur votre corps et votre esprit.",
+        featured: false,
+        href: "https://backoffice.bsport.io/customer/payment/pass/730920/?membership=5398&force=true",
+      },
+      {
+        name: "1 Séance",
+        price: "38 €",
+        credits: "1 crédit",
+        validity: "Valide 1 mois",
+        restrictions: [] as string[],
+        description:
+          "Pas d'engagement, juste du plaisir. Une séance de 50 minutes pour se recentrer, renforcer sa sangle abdominale et se libérer des tensions du quotidien. Le format idéal pour les agendas chargés ou les envies spontanées.",
+        featured: false,
+        href: "https://backoffice.bsport.io/customer/payment/pass/730921/?membership=5398&force=true",
+      },
+      {
+        name: "3 Séances",
+        price: "99 €",
+        credits: "3 crédits",
+        validity: "Valide 2 mois",
+        restrictions: [] as string[],
+        description:
+          "Trois séances pour initier le changement. Le format parfait pour poser les bases de votre pratique, corriger votre posture et commencer à tonifier votre sangle abdominale en profondeur.",
+        featured: false,
+        href: "https://backoffice.bsport.io/customer/payment/pass/730923/?membership=5398&force=true",
+      },
+      {
+        name: "5 Séances",
+        price: "145 €",
+        credits: "5 crédits",
+        validity: "Valide 3 mois",
+        restrictions: [] as string[],
+        description:
+          "La formule préférée de nos élèves réguliers. Cinq séances pour ancrer vos nouvelles habitudes, gagner en souplesse et ressentir une progression visible sur votre silhouette et votre vitalité au quotidien.",
+        featured: true,
+        href: "https://backoffice.bsport.io/customer/payment/pass/730924/?membership=5398&force=true",
+      },
+      {
+        name: "10 Séances",
+        price: "250 €",
+        credits: "10 crédits",
+        validity: "Valide 4 mois",
+        restrictions: [] as string[],
+        description:
+          "Le choix de la régularité et du résultat. Dix séances pour sculpter votre corps en profondeur et intégrer durablement le Pilates à votre style de vie. Profitez de notre tarif le plus avantageux à la séance !",
+        featured: false,
+        href: "https://backoffice.bsport.io/customer/payment/pass/730926/?membership=5398&force=true",
+      },
+    ],
   },
   location: {
     overline: "Localisation",
     title: "Au cœur de Pontoise.",
     address: { label: "Adresse", line1: "24, rue Pierre Butin", line2: "95300 Pontoise" },
     contact: { label: "Contact", email: "team@si-lepilates.com" },
+    transport: {
+      label: "Venir en transports",
+      text: "La gare de Pontoise est à 5 minutes à pied — un trajet court pour commencer à décompresser avant même d'arriver.",
+    },
+    parking: {
+      label: "Venir en voiture",
+      text: "Un parking public se trouve à moins de 5 minutes côté Oise, avec 30 minutes gratuites à l'arrivée. Des places en voirie sont souvent disponibles rue du Vert Buisson et rue Truffaut.",
+    },
   },
   faq: {
     overline: "FAQ",
@@ -225,18 +286,79 @@ const en: typeof fr = {
     title: "A simple offer to get started.",
     subtitle:
       "A clear introductory package, designed to discover the studio and build a regular practice.",
-    badge: "Discovery offer",
-    sessions: "3 sessions",
-    amount: "€90",
-    description:
-      "A simple way to enter the Si Le Pilates world, discover the space and find your rhythm.",
-    cta: "Book now",
+    cta: "Book",
+    popularBadge: "Popular",
+    cards: [
+      {
+        name: "Discovery session",
+        price: "€25",
+        credits: "1 credit",
+        validity: "Valid 1 month",
+        restrictions: ["New members only", "1 purchase / member"],
+        description:
+          "The perfect way to discover the world of Pilates at our studio. Come test our method, meet our coaches and feel the first benefits of Pilates on your body and mind.",
+        featured: false,
+        href: "https://backoffice.bsport.io/customer/payment/pass/730920/?membership=5398&force=true",
+      },
+      {
+        name: "1 Session",
+        price: "€38",
+        credits: "1 credit",
+        validity: "Valid 1 month",
+        restrictions: [] as string[],
+        description:
+          "No commitment, just enjoyment. A 50-minute session to recentre, strengthen your core and release the tensions of daily life. The ideal format for busy schedules or spontaneous visits.",
+        featured: false,
+        href: "https://backoffice.bsport.io/customer/payment/pass/730921/?membership=5398&force=true",
+      },
+      {
+        name: "3 Sessions",
+        price: "€99",
+        credits: "3 credits",
+        validity: "Valid 2 months",
+        restrictions: [] as string[],
+        description:
+          "Three sessions to initiate change. The perfect format to lay the foundations of your practice, correct your posture and start toning your core in depth.",
+        featured: false,
+        href: "https://backoffice.bsport.io/customer/payment/pass/730923/?membership=5398&force=true",
+      },
+      {
+        name: "5 Sessions",
+        price: "€145",
+        credits: "5 credits",
+        validity: "Valid 3 months",
+        restrictions: [] as string[],
+        description:
+          "Our regular students' favourite package. Five sessions to anchor your new habits, gain flexibility and feel a visible improvement in your silhouette and everyday vitality.",
+        featured: true,
+        href: "https://backoffice.bsport.io/customer/payment/pass/730924/?membership=5398&force=true",
+      },
+      {
+        name: "10 Sessions",
+        price: "€250",
+        credits: "10 credits",
+        validity: "Valid 4 months",
+        restrictions: [] as string[],
+        description:
+          "The choice of regularity and results. Ten sessions to sculpt your body in depth and durably integrate Pilates into your lifestyle. Enjoy our best per-session rate!",
+        featured: false,
+        href: "https://backoffice.bsport.io/customer/payment/pass/730926/?membership=5398&force=true",
+      },
+    ],
   },
   location: {
     overline: "Location",
     title: "In the heart of Pontoise.",
     address: { label: "Address", line1: "24, rue Pierre Butin", line2: "95300 Pontoise" },
     contact: { label: "Contact", email: "team@si-lepilates.com" },
+    transport: {
+      label: "Getting here by public transport",
+      text: "Pontoise train station is a 5-minute walk away — a short journey to start unwinding before you even arrive.",
+    },
+    parking: {
+      label: "Getting here by car",
+      text: "A public car park is less than 5 minutes away near the Oise riverbank, with 30 free minutes on arrival. Street parking is often available on rue du Vert Buisson and rue Truffaut.",
+    },
   },
   faq: {
     overline: "FAQ",
