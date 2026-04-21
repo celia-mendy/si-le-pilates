@@ -14,7 +14,7 @@ No test suite is configured.
 
 ## Architecture
 
-Single-page Next.js 16 app (App Router) for **Silpilate**, a French Pilates Reformer studio in Cergy-Pontoise.
+Single-page Next.js 16 app (App Router) for **Silpilate**, a French Pilates Reformer studio in Pontoise.
 
 **Page structure** (`app/page.tsx`): one long landing page composed of section components rendered in order — Navbar → Hero → Intro → Studio → Benefits → Experience → Pricing → Location → FAQ → Booking → Footer → MobileCTA.
 
@@ -35,7 +35,7 @@ Single-page Next.js 16 app (App Router) for **Silpilate**, a French Pilates Refo
 - `cocoa` (#3A2E2A) — primary dark
 - `deep-brown` (#2B2B2B) — body text
 
-**Typography**: `font-sans` = Inter, `font-serif` = Cormorant Garamond (used for headings). Both loaded via `next/font/google` and set as CSS variables.
+**Typography**: `font-sans` = Plus Jakarta Sans (used for body and logo), `font-serif` = Playfair Display (used for headings). Both loaded via `next/font/google` and set as CSS variables.
 
 **Path alias**: `@/` maps to the repo root.
 

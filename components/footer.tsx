@@ -20,7 +20,7 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link href="/" className="font-serif text-3xl font-semibold text-white mb-4 block">
+            <Link href="/" className="font-sans text-3xl font-bold text-white mb-4 block">
               {t.brand}
             </Link>
             <p className="text-white/60 leading-relaxed max-w-md mb-6 whitespace-pre-line">

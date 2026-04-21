@@ -20,13 +20,13 @@ const playfair = Playfair_Display({
 });
 
 const siteUrl = 'https://si-lepilates.com'
-const title = 'Si Le Pilates | Studio de Pilates Reformer à Cergy-Pontoise'
-const description = 'Si Le Pilates est un studio de Pilates Reformer à Cergy-Pontoise, pensé pour offrir une expérience élégante, apaisante et facile à vivre. Réservez votre séance en ligne.'
+const title = 'Si Le Pilates | Studio de Pilates Reformer à Pontoise'
+const description = 'Si Le Pilates est un studio de Pilates Reformer à Pontoise, pensé pour offrir une expérience élégante, apaisante et facile à vivre. Réservez votre séance en ligne.'
 
 export const metadata: Metadata = {
   title,
   description,
-  keywords: ['Pilates', 'Pilates Reformer', 'Cergy-Pontoise', 'Studio Pilates', 'Cours de Pilates', 'Si Le Pilates'],
+  keywords: ['Pilates', 'Pilates Reformer', 'Pontoise', 'Studio Pilates', 'Cours de Pilates', 'Si Le Pilates'],
   authors: [{ name: 'Si Le Pilates' }],
   metadataBase: new URL(siteUrl),
   alternates: { canonical: siteUrl },

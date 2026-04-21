@@ -71,7 +71,7 @@ export function Benefits() {
                 <div className="w-16 h-16 rounded-2xl bg-powder-rose/30 flex items-center justify-center text-muted-gold mb-6">
                   {icons[index]}
                 </div>
-                <h3 className="font-serif text-2xl lg:text-3xl font-medium text-deep-brown dark:text-foreground mb-4">
+                <h3 className="font-ui text-2xl lg:text-3xl font-medium text-deep-brown dark:text-foreground mb-4">
                   {benefit.title}
                 </h3>
                 <p className="text-soft-taupe leading-relaxed">{benefit.text}</p>

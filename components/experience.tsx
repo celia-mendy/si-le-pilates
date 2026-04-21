@@ -68,7 +68,7 @@ export function Experience() {
                   <div className="absolute inset-0 bg-gradient-to-t from-deep-brown/20 to-transparent" />
                 </div>
                 <div className="p-8">
-                  <h3 className="font-serif text-2xl lg:text-3xl font-medium text-deep-brown dark:text-foreground mb-3">
+                  <h3 className="font-ui text-2xl lg:text-3xl font-medium text-deep-brown dark:text-foreground mb-3">
                     {format.title}
                   </h3>
                   <p className="text-soft-taupe leading-relaxed">{format.text}</p>

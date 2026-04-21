@@ -1,7 +1,7 @@
 export type Lang = "fr" | "en"
 
 const fr = {
-  brand: "Si Le Pilates",
+  brand: "[Si] Le Pilates",
   nav: {
     location: "Localisation",
     faq: "FAQ",
@@ -209,7 +209,7 @@ const fr = {
 }
 
 const en: typeof fr = {
-  brand: "Si Le Pilates",
+  brand: "[Si] Le Pilates",
   nav: {
     location: "Location",
     faq: "FAQ",
@@ -398,7 +398,7 @@ const en: typeof fr = {
   },
   footer: {
     description:
-      "Pilates Reformer studio in Cergy-Pontoise. A calm, elegant space, easy to book for a practice that suits you.",
+      "Pilates Reformer studio in Pontoise. A calm, elegant space, easy to book for a practice that suits you.",
     instagram: "@silepilatespontoise",
     navTitle: "Navigation",
     contactTitle: "Contact",
