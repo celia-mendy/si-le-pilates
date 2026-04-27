@@ -215,6 +215,78 @@ export function Pricing() {
           </div>
 
         </div>
+
+        {/* Abonnements Section */}
+        <div className="mt-24 lg:mt-32">
+          {/* Header */}
+          <div className="text-center mb-10">
+            <p className="reveal opacity-0 translate-y-6 transition-all duration-700 mb-3 text-xs uppercase tracking-[0.2em] text-muted-gold font-medium">
+              {t.memberships.overline}
+            </p>
+            <h2 className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-100 font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-deep-brown dark:text-foreground mb-3 text-balance">
+              {t.memberships.title}
+            </h2>
+            <p className="reveal opacity-0 translate-y-6 transition-all duration-700 delay-200 text-base text-soft-taupe max-w-xl mx-auto whitespace-pre-line">
+              {t.memberships.subtitle}
+            </p>
+          </div>
+
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {t.memberships.cards.map((card, idx) => (
+              <div
+                key={card.name}
+                className={`reveal opacity-0 translate-y-8 transition-all duration-700 rounded-3xl p-7 lg:p-8 flex flex-col ${
+                  card.featured 
+                    ? "bg-[#3A2E2A] text-[#F0EBE3]" 
+                    : "bg-card text-deep-brown dark:text-foreground border border-muted-gold/10"
+                }`}
+                style={{ transitionDelay: `${(idx + 1) * 100}ms` }}
+              >
+                <p className={`text-xs uppercase tracking-wide mb-2 ${
+                  card.featured ? "text-[#F0EBE3]/70" : "text-soft-taupe/60 dark:text-foreground/70"
+                }`}>
+                  {card.name}
+                </p>
+                <p className={`font-serif text-4xl lg:text-5xl leading-none mb-3 ${
+                  card.featured ? "text-[#F0EBE3]" : "text-deep-brown dark:text-foreground"
+                }`}>
+                  {card.price}
+                </p>
+                <p className={`text-sm leading-relaxed flex-1 min-h-0 ${
+                  card.featured ? "text-[#F0EBE3]/60" : "text-soft-taupe/70 dark:text-foreground/50"
+                }`}>
+                  {card.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mt-6">
+                  {card.featured ? (
+                    <>
+                      <PillDark>{card.credits}</PillDark>
+                      <PillDark>{card.validity}</PillDark>
+                    </>
+                  ) : (
+                    <>
+                      <Pill>{card.credits}</Pill>
+                      <Pill>{card.validity}</Pill>
+                    </>
+                  )}
+                </div>
+                <a
+                  href={card.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`mt-8 inline-flex items-center justify-center w-full px-6 py-3 text-sm font-medium rounded-full transition-all shadow-md hover:-translate-y-0.5 ${
+                    card.featured
+                      ? "bg-muted-gold text-cocoa"
+                      : "btn-primary"
+                  }`}
+                >
+                  {t.memberships.cta}
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       <style jsx>{`
