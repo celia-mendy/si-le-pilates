@@ -1,7 +1,7 @@
 "use client"
 
-import { useEffect, useRef } from "react"
 import { useLanguage } from "@/contexts/language-context"
+import { useReveal } from "@/hooks/use-reveal"
 
 function Pill({ children }: { children: React.ReactNode }) {
   return (
@@ -20,25 +20,8 @@ function PillDark({ children }: { children: React.ReactNode }) {
 }
 
 export function Pricing() {
-  const sectionRef = useRef<HTMLElement>(null)
+  const sectionRef = useReveal()
   const { t } = useLanguage()
-
-  useEffect(() => {
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    if (prefersReducedMotion) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("animate-in")
-        })
-      },
-      { threshold: 0.1 }
-    )
-
-    sectionRef.current?.querySelectorAll(".reveal").forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
-  }, [])
 
   const featured   = t.pricing.cards[3]  // 5 Séances
   const decouverte = t.pricing.cards[0]  // Séance découverte
@@ -289,12 +272,7 @@ export function Pricing() {
         </div>
       </div>
 
-      <style jsx>{`
-        .reveal.animate-in {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      `}</style>
+
     </section>
   )
 }

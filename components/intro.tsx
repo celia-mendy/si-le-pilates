@@ -1,28 +1,11 @@
 "use client"
 
-import { useEffect, useRef } from "react"
 import { useLanguage } from "@/contexts/language-context"
+import { useReveal } from "@/hooks/use-reveal"
 
 export function Intro() {
-  const sectionRef = useRef<HTMLElement>(null)
+  const sectionRef = useReveal()
   const { t } = useLanguage()
-
-  useEffect(() => {
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    if (prefersReducedMotion) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("animate-in")
-        })
-      },
-      { threshold: 0.2 }
-    )
-
-    sectionRef.current?.querySelectorAll(".reveal").forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
-  }, [])
 
   return (
     <section ref={sectionRef} className="py-24 sm:py-32 lg:py-40 bg-background">
@@ -55,13 +38,6 @@ export function Intro() {
           ))}
         </div>
       </div>
-
-      <style jsx>{`
-        .reveal.animate-in {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      `}</style>
     </section>
   )
 }

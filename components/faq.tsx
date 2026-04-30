@@ -1,34 +1,14 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useState } from "react"
 import { ChevronDown } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
+import { useReveal } from "@/hooks/use-reveal"
 
 export function FAQ() {
-  const sectionRef = useRef<HTMLElement>(null)
+  const sectionRef = useReveal()
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const { t } = useLanguage()
-
-  useEffect(() => {
-    setOpenIndex(null)
-  }, [t])
-
-  useEffect(() => {
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    if (prefersReducedMotion) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("animate-in")
-        })
-      },
-      { threshold: 0.15 }
-    )
-
-    sectionRef.current?.querySelectorAll(".reveal").forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
-  }, [])
 
   return (
     <section ref={sectionRef} id="faq" className="py-24 sm:py-32 lg:py-40 bg-background">
@@ -80,12 +60,7 @@ export function FAQ() {
         </div>
       </div>
 
-      <style jsx>{`
-        .reveal.animate-in {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      `}</style>
+
     </section>
   )
 }

@@ -1,8 +1,8 @@
 "use client"
 
-import { useEffect, useRef } from "react"
 import Image from "next/image"
 import { useLanguage } from "@/contexts/language-context"
+import { useReveal } from "@/hooks/use-reveal"
 
 const images = [
   "/images/190701_GOOD-DAY_242+copy.jpg",
@@ -10,25 +10,8 @@ const images = [
 ]
 
 export function Experience() {
-  const sectionRef = useRef<HTMLElement>(null)
+  const sectionRef = useReveal()
   const { t } = useLanguage()
-
-  useEffect(() => {
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    if (prefersReducedMotion) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("animate-in")
-        })
-      },
-      { threshold: 0.15 }
-    )
-
-    sectionRef.current?.querySelectorAll(".reveal").forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
-  }, [])
 
   const scrollToBooking = () => {
     document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })
@@ -94,12 +77,7 @@ export function Experience() {
         </div>
       </div>
 
-      <style jsx>{`
-        .reveal.animate-in {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      `}</style>
+
     </section>
   )
 }

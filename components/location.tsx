@@ -1,29 +1,12 @@
 "use client"
 
-import { useEffect, useRef } from "react"
 import { MapPin, Phone, Train, Car } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
+import { useReveal } from "@/hooks/use-reveal"
 
 export function Location() {
-  const sectionRef = useRef<HTMLElement>(null)
+  const sectionRef = useReveal()
   const { t } = useLanguage()
-
-  useEffect(() => {
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    if (prefersReducedMotion) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add("animate-in")
-        })
-      },
-      { threshold: 0.15 }
-    )
-
-    sectionRef.current?.querySelectorAll(".reveal").forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
-  }, [])
 
   const loc = t.location
 
@@ -110,12 +93,7 @@ export function Location() {
         </div>
       </div>
 
-      <style jsx>{`
-        .reveal.animate-in {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      `}</style>
+
     </section>
   )
 }
