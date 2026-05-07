@@ -266,6 +266,11 @@ export function Pricing() {
                 >
                   {t.memberships.cta}
                 </a>
+                <p className={`mt-2.5 text-center text-[11px] tracking-wide ${
+                  card.featured ? "text-[#F0EBE3]/40" : "text-soft-taupe/50 dark:text-foreground/30"
+                }`}>
+                  Engagement 6 mois
+                </p>
               </div>
             ))}
           </div>
