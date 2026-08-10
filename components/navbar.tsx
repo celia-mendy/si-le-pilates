@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import { usePathname, useRouter } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { LanguageToggle } from "@/components/language-toggle"
@@ -11,6 +12,8 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const { t } = useLanguage()
+  const pathname = usePathname()
+  const router = useRouter()
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20)
@@ -20,7 +23,12 @@ export function Navbar() {
 
   const scrollToSection = (id: string) => {
     setIsMobileMenuOpen(false)
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
+    const el = document.getElementById(id)
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" })
+    } else if (pathname !== "/") {
+      router.push(`/#${id}`)
+    }
   }
 
   const navLinkStyle = {
@@ -68,24 +76,15 @@ export function Navbar() {
 
           {/* ── Desktop right ── */}
           <div className="hidden md:flex items-center gap-3">
-            <button
-              onClick={() => scrollToSection("tarifs")}
+            <Link
+              href="/mon-compte"
               className="text-sm transition-colors"
               style={navLinkStyle}
               onMouseEnter={(e) => (e.currentTarget.style.color = "var(--th-text)")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "var(--th-text-muted)")}
             >
-              {t.nav.pricing}
-            </button>
-            <button
-              onClick={() => scrollToSection("faq")}
-              className="text-sm transition-colors"
-              style={navLinkStyle}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--th-text)")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "var(--th-text-muted)")}
-            >
-              {t.nav.faq}
-            </button>
+              {t.nav.myAccount}
+            </Link>
             <button
               onClick={() => scrollToSection("booking")}
               className="btn-primary inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium rounded-full hover:-translate-y-0.5 shadow-md"
@@ -120,23 +119,28 @@ export function Navbar() {
           >
             <div className="flex flex-col px-6 py-6 gap-1">
               {/* Nav links */}
-              {[
-                { label: t.nav.location, id: "localisation" },
-                { label: t.nav.pricing, id: "tarifs" },
-                { label: t.nav.faq, id: "faq" },
-              ].map(({ label, id }) => (
-                <button
-                  key={id}
-                  onClick={() => scrollToSection(id)}
-                  className="text-left py-3 text-base font-medium transition-colors border-b"
-                  style={{
-                    color: "var(--th-text)",
-                    borderColor: "color-mix(in srgb, var(--th-border) 40%, transparent)",
-                  }}
-                >
-                  {label}
-                </button>
-              ))}
+              <button
+                onClick={() => scrollToSection("localisation")}
+                className="text-left py-3 text-base font-medium transition-colors border-b"
+                style={{
+                  color: "var(--th-text)",
+                  borderColor: "color-mix(in srgb, var(--th-border) 40%, transparent)",
+                }}
+              >
+                {t.nav.location}
+              </button>
+
+              <Link
+                href="/mon-compte"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-left py-3 text-base font-medium transition-colors border-b"
+                style={{
+                  color: "var(--th-text)",
+                  borderColor: "color-mix(in srgb, var(--th-border) 40%, transparent)",
+                }}
+              >
+                {t.nav.myAccount}
+              </Link>
 
               {/* Book CTA */}
               <button

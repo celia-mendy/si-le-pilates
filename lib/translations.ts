@@ -7,6 +7,7 @@ const fr = {
     faq: "FAQ",
     pricing: "Tarifs",
     book: "Réserver",
+    myAccount: "Mon Compte",
     palette: "Palette",
     mobileAriaOpen: "Ouvrir le menu",
     mobileAriaClose: "Fermer le menu",
@@ -221,6 +222,10 @@ const fr = {
     subtitle:
       "Choisissez votre créneau directement en ligne.\nUne réservation simple, pensée pour revenir facilement chaque\nfois que vous en avez envie.",
   },
+  myAccount: {
+    title: "Mon Compte",
+    subtitle: "Connectez-vous ou créez votre compte pour réserver facilement vos séances.",
+  },
   footer: {
     description:
       "Studio de Pilates Reformer à Pontoise.\nUn lieu calme, élégant et simple à réserver pour une pratique qui vous ressemble.",
@@ -248,6 +253,7 @@ const en: typeof fr = {
     faq: "FAQ",
     pricing: "Pricing",
     book: "Book now",
+    myAccount: "My Account",
     palette: "Palette",
     mobileAriaOpen: "Open menu",
     mobileAriaClose: "Close menu",
@@ -461,6 +467,10 @@ const en: typeof fr = {
     title: "Book your session",
     subtitle:
       "Choose your time slot directly online. A simple booking experience, designed so you can come back as often as you like.",
+  },
+  myAccount: {
+    title: "My Account",
+    subtitle: "Sign in or create your account to easily book your sessions.",
   },
   footer: {
     description:
