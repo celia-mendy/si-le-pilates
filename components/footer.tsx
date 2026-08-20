@@ -26,16 +26,30 @@ export function Footer() {
             <p className="text-white/60 leading-relaxed max-w-md mb-6 whitespace-pre-line">
               {t.footer.description}
             </p>
-            <a
-              href="https://www.instagram.com/silepilatespontoise/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors"
-              aria-label="Instagram Si Le Pilates"
-            >
-              <Instagram className="w-5 h-5" />
-              <span>{t.footer.instagram}</span>
-            </a>
+            <div className="flex items-center gap-5">
+              <a
+                href="https://www.instagram.com/silepilatespontoise/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors"
+                aria-label="Instagram Si Le Pilates"
+              >
+                <Instagram className="w-5 h-5" />
+                <span>{t.footer.instagram}</span>
+              </a>
+              <a
+                href="https://www.tiktok.com/@silepilates"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors"
+                aria-label="TikTok Si Le Pilates"
+              >
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.8a8.27 8.27 0 0 0 3.76.92V6.69Z" />
+                </svg>
+                <span>TikTok</span>
+              </a>
+            </div>
           </div>
 
           {/* Navigation */}
