@@ -6,6 +6,7 @@ import { useLanguage } from "@/contexts/language-context"
 export function Hero() {
   const heroRef = useRef<HTMLElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
   const { t } = useLanguage()
 
   useEffect(() => {
@@ -24,6 +25,21 @@ export function Hero() {
     }
   }, [])
 
+  // Ensure video plays on mobile (low-power mode can pause it)
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+    const play = () => { video.play().catch(() => {}) }
+    video.addEventListener("canplay", play)
+    // Also retry on visibility change (tab switch)
+    const onVisible = () => { if (!document.hidden) play() }
+    document.addEventListener("visibilitychange", onVisible)
+    return () => {
+      video.removeEventListener("canplay", play)
+      document.removeEventListener("visibilitychange", onVisible)
+    }
+  }, [])
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
   }
@@ -33,17 +49,24 @@ export function Hero() {
       ref={heroRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background Image with Overlay */}
+      {/* Background Video */}
       <div className="absolute inset-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
-          style={{ backgroundImage: `url('/images/NRO_201009_GD_0705.jpg')` }}
+        <video
+          ref={videoRef}
+          className="absolute inset-0 w-full h-full object-cover scale-105"
+          src="/videos/pilatesvideo2.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
         />
+        {/* Overlay gradient — keeps text readable */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to bottom, color-mix(in srgb, var(--background) 60%, transparent), color-mix(in srgb, var(--background) 40%, transparent) 50%, color-mix(in srgb, var(--background) 80%, transparent))",
+              "linear-gradient(to bottom, color-mix(in oklch, var(--background) 55%, transparent), color-mix(in oklch, var(--background) 35%, transparent) 50%, color-mix(in oklch, var(--background) 75%, transparent))",
           }}
         />
       </div>
@@ -88,20 +111,29 @@ export function Hero() {
             {t.hero.ctaPrimary}
           </button>
           <button
-            onClick={() => scrollToSection("studio")}
+            onClick={() => {
+              const container = document.getElementById('bsport-login-hidden')
+              if (!container) return
+              const btn = container.querySelector<HTMLElement>('button, a, [role="button"]')
+                ?? container.querySelector<HTMLElement>('*')
+              if (btn) {
+                btn.style.pointerEvents = 'auto'
+                btn.click()
+              }
+            }}
             className="inline-flex items-center justify-center px-8 py-4 text-base font-medium backdrop-blur-sm rounded-full transition-all duration-300"
             style={{
-              background: "color-mix(in srgb, var(--th-surface) 84%, transparent)",
+              background: "color-mix(in oklch, var(--th-surface) 84%, transparent)",
               color: "var(--th-text)",
-              border: "1px solid color-mix(in srgb, var(--th-border) 90%, transparent)",
+              border: "1px solid color-mix(in oklch, var(--th-border) 90%, transparent)",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.background = "var(--th-surface)")}
             onMouseLeave={(e) =>
               (e.currentTarget.style.background =
-                "color-mix(in srgb, var(--th-surface) 84%, transparent)")
+                "color-mix(in oklch, var(--th-surface) 84%, transparent)")
             }
           >
-            {t.hero.ctaSecondary}
+            {t.hero.ctaLogin}
           </button>
         </div>
       </div>
@@ -109,7 +141,7 @@ export function Hero() {
       {/* Scroll Indicator */}
       <div
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-        style={{ color: "color-mix(in srgb, var(--th-text-muted) 78%, transparent)" }}
+        style={{ color: "color-mix(in oklch, var(--th-text-muted) 78%, transparent)" }}
       >
         <span className="text-xs uppercase tracking-widest">{t.hero.scroll}</span>
         <div
